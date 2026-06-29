@@ -22,6 +22,12 @@ $hero_image = get_field( 'lp_hero_image' );
 $hero_head  = get_field( 'lp_hero_heading' );
 $hero_sub   = get_field( 'lp_hero_subheading' );
 $book_url   = 'https://booknow.blacktiebikes.com/reservations/step1';
+
+// Page is "empty" until at least one category is added. While empty, show the
+// same "Content Coming Soon" notice the Service template uses; it disappears
+// automatically the moment any Local Picks content is filled in.
+$lp_cats   = get_field( 'lp_categories' );
+$has_picks = is_array( $lp_cats ) && count( $lp_cats );
 ?>
 
 <?php if ( $hero_head || $hero_image ) : ?>
@@ -35,6 +41,17 @@ $book_url   = 'https://booknow.blacktiebikes.com/reservations/step1';
 </section>
 <?php endif; ?>
 
+<?php /* ── Content coming soon (only while the page has no Local Picks yet) ── */ ?>
+<?php if ( ! $has_picks ) : ?>
+<section class="module mod-service-comingsoon">
+  <div class="container text-center">
+    <h2 class="service-comingsoon__heading">Content Coming Soon</h2>
+    <p class="service-comingsoon__text">We're currently updating this page and will have more information available soon. Please check back later.</p>
+  </div>
+</section>
+<?php endif; ?>
+
+<?php if ( $has_picks ) : ?>
 <section class="module mod-local-picks">
   <div class="container">
 
@@ -85,6 +102,7 @@ $book_url   = 'https://booknow.blacktiebikes.com/reservations/step1';
 
   </div>
 </section>
+<?php endif; ?>
 
 <?php /* ── Footer CTA (reservation link) — renders on every local-picks page ── */ ?>
 <?php get_template_part( 'template-parts/includes/book-cta' ); ?>
