@@ -3400,11 +3400,8 @@ html body .mod-book-ski .btn-outline-primary:focus {
 .mod-local-picks {
   padding: 80px 0;
 }
-.mod-local-picks .container {
-  max-width: 1200px;
-  padding-left: clamp(20px, 10%, 120px);
-  padding-right: clamp(20px, 10%, 120px);
-}
+/* Use the default .container width (no override) so the content lines up with
+   the Service pages — same width as the rest of the site. */
 .lp-category {
   margin-bottom: 72px;
 }
