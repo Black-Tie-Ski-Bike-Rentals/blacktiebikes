@@ -3,9 +3,7 @@
  * WW-53: Local Picks page body.
  *
  * ACF fields:
- *   lp_hero_image      (image, optional)
- *   lp_hero_heading    (text)
- *   lp_hero_subheading (text, optional)
+ *   lp_hero_image (image, optional) — the ONLY editable hero field
  *   lp_categories (repeater)
  *     category_heading (text)               -> H2
  *     recommendations (repeater)
@@ -14,13 +12,13 @@
  *       rec_image       (image, optional)
  *
  * Hero mirrors the Service template hero (same markup/classes + Book Now button).
+ * Hero heading is the page title ("Local Picks in {Location}"); no subheading.
+ * Only the hero image is editable.
  * Recommendations alternate image left/right; a recommendation with no image
  * runs full width. On mobile everything stacks with the image below the text.
  */
 
 $hero_image = get_field( 'lp_hero_image' );
-$hero_head  = get_field( 'lp_hero_heading' );
-$hero_sub   = get_field( 'lp_hero_subheading' );
 $book_url   = 'https://booknow.blacktiebikes.com/reservations/step1';
 
 // Page is "empty" until at least one category is added. While empty, show the
@@ -30,16 +28,13 @@ $lp_cats   = get_field( 'lp_categories' );
 $has_picks = is_array( $lp_cats ) && count( $lp_cats );
 ?>
 
-<?php if ( $hero_head || $hero_image ) : ?>
 <section class="module mod-service-hero"<?php if ( $hero_image ) : ?> style="background-image:url('<?php echo esc_url( is_array( $hero_image ) ? $hero_image['url'] : $hero_image ); ?>')"<?php endif; ?>>
   <div class="service-hero__overlay"></div>
   <div class="container service-hero__inner text-center">
-    <?php if ( $hero_head ) : ?><h1 class="service-hero__heading"><?php echo esc_html( $hero_head ); ?></h1><?php endif; ?>
-    <?php if ( $hero_sub ) : ?><p class="service-hero__sub"><?php echo esc_html( $hero_sub ); ?></p><?php endif; ?>
+    <h1 class="service-hero__heading"><?php echo esc_html( get_the_title() ); ?></h1>
     <a href="<?php echo esc_url( $book_url ); ?>" class="btn">Book Now</a>
   </div>
 </section>
-<?php endif; ?>
 
 <?php /* ── Content coming soon (only while the page has no Local Picks yet) ── */ ?>
 <?php if ( ! $has_picks ) : ?>
@@ -103,6 +98,3 @@ $has_picks = is_array( $lp_cats ) && count( $lp_cats );
   </div>
 </section>
 <?php endif; ?>
-
-<?php /* ── Footer CTA (reservation link) — renders on every local-picks page ── */ ?>
-<?php get_template_part( 'template-parts/includes/book-cta' ); ?>

@@ -6,8 +6,10 @@
  */
 ?>
 <?php
-wp_reset_query(); //important to destroy the previous query and setup a new query.	
+wp_reset_query(); //important to destroy the previous query and setup a new query.
 ?>
+<?php /* Site-wide footer CTA on every page (mirrors the home cta_and_footer). */ ?>
+<?php if ( is_page() ) { get_template_part( 'template-parts/includes/book-cta' ); } ?>
 </main>
 <!-- BEGIN LOADDING -->
 <div class="module over-loader">

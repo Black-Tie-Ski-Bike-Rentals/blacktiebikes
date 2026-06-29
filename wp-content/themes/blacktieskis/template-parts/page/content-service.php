@@ -113,6 +113,3 @@ jQuery(document).ready(function ($) {
 });
 </script>
 <?php endif; ?>
-
-<?php /* ── Footer CTA (reservation link) — renders on every service page ── */ ?>
-<?php get_template_part( 'template-parts/includes/book-cta' ); ?>

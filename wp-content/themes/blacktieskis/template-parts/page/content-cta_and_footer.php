@@ -1,35 +1,8 @@
 <?php
 /**
- * Displays content for CTA footer Section
- */ 
-?>
-<?php 
-$footer_headline = get_sub_field('headline');
-$footer_cta_popup_title = get_sub_field('cta_popup_title');
-$footer_cta_title = get_sub_field('cta_title');
-if($pageid==20){ ?>
-<section id="mod-book-ski" class="module mod-book-ski animation">
-	<?php }else{ ?>
-	<section   class="module mod-book-ski">
-		<?php } ?>
-
-	
-	
-	
-    <div class="book-ski-headline container text-center ani-bottom">
-        <?php 
-		if( !empty($footer_headline) ) :
-			?><h2><?php echo $footer_headline; ?></h2><?php
-		endif;
-		if( !empty($footer_cta_title) ) :
-			$footer_cta_link = get_sub_field('cta_link');
-			?><a  href="javascript:void(0);" id="boonowbutton" data-id="#booknow" data-htmlclass="html-popup-content" class="popup-is-open btn" ><?php echo $footer_cta_title; ?></a><?php
-		endif;
-		if( !empty($footer_cta_popup_title) ) :
-			?><a href="https://www.blacktiebikes.com/contact/" class="btn btn-outline-primary text-uppercase" ><?php echo $footer_cta_popup_title; ?></a><?php
-		endif;
-		?>       
-    </div>
-	  <div class="bg-book-ski-fulldesk ani-bottom" data-src="<?php echo get_stylesheet_directory_uri(); ?>/images/footer-image.webp" style="background-position: top center;"></div>
-    <div class="bg-book-ski-desk ani-bottom" style="background-image:url('<?php echo get_stylesheet_directory_uri(); ?>/images/footer-image.webp'); background-position: center center;"></div>	    
-</section>
+ * DEPRECATED — the footer CTA is now rendered site-wide from footer.php via
+ * template-parts/includes/book-cta.php (which mirrors this block: headline +
+ * "Book now" popup + "Contact us"). This builder layout is kept so existing
+ * `cta_and_footer` rows don't error, but it intentionally renders NOTHING to
+ * avoid a duplicate CTA. See template-parts/includes/book-cta.php.
+ */
