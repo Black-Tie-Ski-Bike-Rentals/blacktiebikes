@@ -28,46 +28,6 @@
             "mime_types": ""
         },
         {
-            "key": "field_lp_hero_heading",
-            "label": "Hero Heading",
-            "name": "lp_hero_heading",
-            "aria-label": "",
-            "type": "text",
-            "instructions": "",
-            "required": false,
-            "conditional_logic": false,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "maxlength": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": ""
-        },
-        {
-            "key": "field_lp_hero_sub",
-            "label": "Hero Subheading",
-            "name": "lp_hero_subheading",
-            "aria-label": "",
-            "type": "text",
-            "instructions": "",
-            "required": false,
-            "conditional_logic": false,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "maxlength": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": ""
-        },
-        {
             "key": "field_lp_categories",
             "label": "Categories",
             "name": "lp_categories",
@@ -129,6 +89,7 @@
                     "max": 0,
                     "rows_per_page": 20,
                     "collapsed": "",
+                    "parent_repeater": "field_lp_categories",
                     "sub_fields": [
                         {
                             "key": "field_lp_rec_title",
@@ -149,27 +110,6 @@
                             "placeholder": "",
                             "prepend": "",
                             "append": "",
-                            "parent_repeater": "field_lp_recs"
-                        },
-                        {
-                            "key": "field_lp_rec_desc",
-                            "label": "Description",
-                            "name": "rec_description",
-                            "aria-label": "",
-                            "type": "wysiwyg",
-                            "instructions": "",
-                            "required": false,
-                            "conditional_logic": false,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "tabs": "visual",
-                            "media_upload": 0,
-                            "toolbar": "full",
-                            "default_value": "",
-                            "delay": 0,
                             "parent_repeater": "field_lp_recs"
                         },
                         {
@@ -197,9 +137,29 @@
                             "max_size": 0,
                             "mime_types": "",
                             "parent_repeater": "field_lp_recs"
+                        },
+                        {
+                            "key": "field_lp_rec_desc",
+                            "label": "Description",
+                            "name": "rec_description",
+                            "aria-label": "",
+                            "type": "wysiwyg",
+                            "instructions": "",
+                            "required": false,
+                            "conditional_logic": false,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "tabs": "visual",
+                            "media_upload": 0,
+                            "toolbar": "full",
+                            "default_value": "",
+                            "delay": 0,
+                            "parent_repeater": "field_lp_recs"
                         }
-                    ],
-                    "parent_repeater": "field_lp_categories"
+                    ]
                 }
             ]
         }
@@ -225,5 +185,5 @@
     "display_title": "",
     "allow_ai_access": false,
     "ai_description": "",
-    "modified": 1781759452
+    "modified": 1782775809
 }
