@@ -85,3 +85,6 @@ $book_url   = 'https://booknow.blacktiebikes.com/reservations/step1';
 
   </div>
 </section>
+
+<?php /* ── Footer CTA (reservation link) — renders on every local-picks page ── */ ?>
+<?php get_template_part( 'template-parts/includes/book-cta' ); ?>

@@ -1932,6 +1932,16 @@
                 "param": "post_type",
                 "operator": "==",
                 "value": "page"
+            },
+            {
+                "param": "page_template",
+                "operator": "!=",
+                "value": "page-service.php"
+            },
+            {
+                "param": "page_template",
+                "operator": "!=",
+                "value": "page-local-picks.php"
             }
         ]
     ],
@@ -1947,6 +1957,6 @@
     "display_title": "",
     "allow_ai_access": false,
     "ai_description": "",
-    "modified": 1782513976,
+    "modified": 1782768747,
     "local_file": "\/Users\/lauralong\/Local Sites\/blacktiebikes-sent\/app\/public\/wp-content\/themes\/blacktieskis\/acf-json\/group_5bbc57f04d44c.json"
 }
