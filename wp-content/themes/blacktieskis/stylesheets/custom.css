@@ -695,7 +695,7 @@ body div.gform_wrapper div.gform_body select {
 
 .page-id-20 #products {
   padding: 70px;
-  height: 350px;
+  height: auto; /* WW-25: was 350px fixed — grow to fit the round images + CTA */
 }
 .book-ski-headline {
   padding-top: 40px;
@@ -860,7 +860,7 @@ html.popup-animation .popup-careers.popup-inner,
 @media only screen and (max-width: 575px) {
   .page-id-20 #products {
     padding: 70px;
-    height: 550px;
+    height: auto; /* WW-25: was 550px fixed */
   }
   .mod-about .triangle-black {
     border-left: 400px solid transparent;
@@ -3633,18 +3633,28 @@ html body .mod-book-ski .btn-outline-primary:focus {
 
 /* WW-25 Adventure Products (homepage #products) — H2 @2rem, 3 round images
    (Bikes/Paddle/4x4) centered, "Explore premium gear" line + Book Now CTA. */
+/* The section reuses .mod-about (522px min-height row + the next About block
+   overlaps up via its triangles). Make it opaque, sit above, size to content. */
+#products {
+  position: relative;
+  z-index: 2;
+  background: #fff;
+  padding: 40px 0 70px;
+}
+#products .row { min-height: 0; }
+#products .home-jumbotron { margin-bottom: 0; padding-bottom: 0; }
 #products .entry-title { font-size: 2rem; }
 #products .adv-products {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 3rem;
+  gap: 4.5rem;
   margin: 2.5rem auto 1.5rem;
 }
 #products .adv-product { text-align: center; }
 #products .adv-product__img {
-  width: 200px;
-  height: 200px;
+  width: 300px; /* matches the value-props .step-item-image (300px) */
+  height: 300px;
   border-radius: 50%;
   object-fit: cover;
   display: block;
@@ -3657,22 +3667,16 @@ html body .mod-book-ski .btn-outline-primary:focus {
   font-size: 1.25rem;
   letter-spacing: 0.5px;
 }
-#products .adv-products__sub { margin-top: 1.5rem; }
+#products .adv-products__sub { margin-top: 3rem; }
 #products .newcl { margin-top: 1rem; }
-#products .newcl a.popup-is-open {
-  display: inline-block;
-  background: #256bb2;
-  color: #fff;
-  text-transform: uppercase;
-  font-weight: 700;
-  letter-spacing: 0.5px;
-  padding: 12px 34px;
-  border-radius: 4px;
-  text-decoration: none;
-}
-#products .newcl a.popup-is-open:hover { background: #1d5896; }
+/* CTA reuses the global #boonowbutton styling (padding/radius/font/transition);
+   just flip the colors for this instance: blue at rest, theme green on hover.
+   The global hover is blue with !important, so override with id + !important. */
+#products #boonowbutton { background-color: #256bb2; }
+#products #boonowbutton:hover,
+#products #boonowbutton.is-hover { background-color: #568f3b !important; }
 @media (max-width: 767px) {
-  #products .adv-products { flex-direction: column; align-items: center; gap: 2rem; }
-  #products .adv-product__img { width: 160px; height: 160px; }
+  #products .adv-products { flex-direction: column; align-items: center; gap: 2.5rem; }
+  #products .adv-product__img { width: 280px; height: 280px; }
   #products .entry-title { font-size: 1.5rem; }
 }
