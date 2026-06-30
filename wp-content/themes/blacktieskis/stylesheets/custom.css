@@ -92,6 +92,32 @@ ul.accordion-list li div.answer p {
   color: #fff;
   margin: 0 0 15px 0;
 }
+
+/* WW-16: location-page FAQ section (faq_section layout) */
+.mod-faqs {
+  padding: 60px 0;            /* space above (below About) + below */
+}
+.mod-faqs .faqs__heading {
+  text-align: left;          /* left-align heading */
+  font-size: 1.875rem;       /* match other location section headings (.explore-section__heading) */
+  color: var(--color-text);
+  line-height: 1.2;
+  margin-bottom: 8px;
+}
+.mod-faqs .faqs__sub {
+  text-align: left;
+  font-size: 0.875rem;       /* match section sub-headings (.explore-section__sub) */
+  color: var(--color-text);
+  line-height: 1.6;
+  margin-bottom: 28px;
+}
+.mod-faqs ul.accordion-list li h3 {
+  text-transform: none !important; /* questions render as written (not all caps) */
+}
+@media (max-width: 767px) {
+  .mod-faqs { padding: 40px 0; }
+  .mod-faqs .faqs__heading { font-size: 1.375rem; }
+}
 .page-id-33841 .mod-about .row,
 .page-id-34224 .mod-about .row,
 .page-id-34165 .mod-about .row,

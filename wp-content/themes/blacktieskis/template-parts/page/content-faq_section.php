@@ -2,27 +2,33 @@
 /**
  * WW-16: Location-page FAQ section (Layout Builder layout `faq_section`).
  *
- * Placed below the About Us block on location pages. Holds one merged accordion
- * (bike + paddle FAQs combined). Sub-fields:
- *   faq_heading (text, default "FAQs")
- *   faqs        (wysiwyg — <ul class="accordion-list"> … </ul>)
+ * Below the About Us block. One merged accordion (bike + paddle combined).
+ * Sub-fields:
+ *   faq_heading    (text, default "Frequently Asked Questions")
+ *   faq_subheading (text, default "Find quick answers about rentals, …")
+ *   faqs           (wysiwyg — <ul class="accordion-list"> … </ul>)
  *
- * Accordion toggle JS mirrors the Service template's; scoped to .mod-faqs so it
- * doesn't collide with any other accordion on the page. Icon glyph comes from
- * the material-design-iconic-font (loaded here, same as the Service FAQ).
+ * Heading/subheading left-aligned and sized to match the other location-page
+ * sections (see .mod-faqs in custom.css). Accordion toggle JS scoped to
+ * .mod-faqs so answers start collapsed and the +/× icon shows.
  */
 
 $faq_heading = get_sub_field( 'faq_heading' );
+$faq_sub     = get_sub_field( 'faq_subheading' );
 $faqs        = get_sub_field( 'faqs' );
 
 if ( empty( $faqs ) ) {
 	return;
 }
+
+$heading = $faq_heading ? $faq_heading : 'Frequently Asked Questions';
+$sub     = $faq_sub ? $faq_sub : 'Find quick answers about rentals, equipment, pickup options, and more.';
 ?>
 
 <section class="module mod-faqs">
   <div class="container">
-    <h2 class="faqs__heading text-center"><?php echo esc_html( $faq_heading ? $faq_heading : 'FAQs' ); ?></h2>
+    <h2 class="faqs__heading"><?php echo esc_html( $heading ); ?></h2>
+    <?php if ( $sub ) : ?><p class="faqs__sub"><?php echo esc_html( $sub ); ?></p><?php endif; ?>
     <?php echo $faqs; ?>
   </div>
 </section>

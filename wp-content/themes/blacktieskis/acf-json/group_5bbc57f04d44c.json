@@ -1940,7 +1940,27 @@
                                 "class": "",
                                 "id": ""
                             },
-                            "default_value": "FAQs",
+                            "default_value": "Frequently Asked Questions",
+                            "maxlength": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": ""
+                        },
+                        {
+                            "key": "field_faq_subheading",
+                            "label": "Subheading",
+                            "name": "faq_subheading",
+                            "aria-label": "",
+                            "type": "text",
+                            "instructions": "",
+                            "required": false,
+                            "conditional_logic": false,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "Find quick answers about rentals, equipment, pickup options, and more.",
                             "maxlength": "",
                             "placeholder": "",
                             "prepend": "",
@@ -2007,6 +2027,6 @@
     "display_title": "",
     "allow_ai_access": false,
     "ai_description": "",
-    "modified": 1782789523,
+    "modified": 1782793480,
     "local_file": "\/Users\/lauralong\/Local Sites\/blacktiebikes-sent\/app\/public\/wp-content\/themes\/blacktieskis\/acf-json\/group_5bbc57f04d44c.json"
 }
