@@ -39,7 +39,7 @@ ul.accordion-list li {
   padding: 20px 50px 20px 30px;
   margin: 0 auto 5px auto;
   border: 0px;
-  border-radius: 0;
+  border-radius: 6px; /* WW-16 */
   cursor: pointer;
 }
 
@@ -67,7 +67,7 @@ ul.accordion-list li h3:after {
   position: absolute;
   right: -25px;
   top: 0;
-  color: #282828;
+  color: #fff; /* WW-16: white +/x icon */
   transition: all 0.3s ease-in-out;
   font-size: 30px;
   line-height: 20px;
