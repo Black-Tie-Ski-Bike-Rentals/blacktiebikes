@@ -3609,3 +3609,24 @@ html body .mod-book-ski .btn-outline-primary:focus {
     padding-right: 0;
   }
 }
+
+/* WW-26 (home) & WW-15 (location) — About "Our Story": brand green #568f3b →
+   palette blue #256bb2 (triangle) + white heading at ~3rem (per about-mockup).
+   Scoped to .mod-about, which the contact page does NOT use for this element. */
+.mod-about .triangle-blue {
+  border-top-color: #256bb2; /* was brand green #568f3b */
+}
+.mod-about .triangle-purple,
+.mod-about .col-left .triangle-purple-left,
+.mod-about .col-right .triangle-purple-right {
+  border-top-color: #256bb2; /* was maroon #490000 */
+}
+.mod-about-content h2 {
+  color: #fff; /* was green #568f3b */
+  font-size: 3rem;
+  line-height: 1.1;
+  margin-bottom: 1.5rem;
+}
+@media (max-width: 767px) {
+  .mod-about-content h2 { font-size: 2rem; }
+}
