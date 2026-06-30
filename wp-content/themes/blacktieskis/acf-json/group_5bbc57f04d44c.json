@@ -1989,6 +1989,64 @@
                     ],
                     "min": "",
                     "max": ""
+                },
+                "layout_gallery_section": {
+                    "key": "layout_gallery_section",
+                    "name": "gallery_section",
+                    "label": "Gallery Section",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_gallery_heading",
+                            "label": "Heading (optional)",
+                            "name": "gallery_heading",
+                            "aria-label": "",
+                            "type": "text",
+                            "instructions": "",
+                            "required": false,
+                            "conditional_logic": false,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "maxlength": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": ""
+                        },
+                        {
+                            "key": "field_gallery_images",
+                            "label": "Images",
+                            "name": "gallery_images",
+                            "aria-label": "",
+                            "type": "gallery",
+                            "instructions": "",
+                            "required": false,
+                            "conditional_logic": false,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "return_format": "array",
+                            "preview_size": "medium",
+                            "insert": "append",
+                            "library": "all",
+                            "min": 0,
+                            "max": 0,
+                            "min_width": 0,
+                            "min_height": 0,
+                            "min_size": 0,
+                            "max_width": 0,
+                            "max_height": 0,
+                            "max_size": 0,
+                            "mime_types": ""
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
                 }
             },
             "button_label": "Add More Layout",
@@ -2027,6 +2085,6 @@
     "display_title": "",
     "allow_ai_access": false,
     "ai_description": "",
-    "modified": 1782793480,
+    "modified": 1782857652,
     "local_file": "\/Users\/lauralong\/Local Sites\/blacktiebikes-sent\/app\/public\/wp-content\/themes\/blacktieskis\/acf-json\/group_5bbc57f04d44c.json"
 }

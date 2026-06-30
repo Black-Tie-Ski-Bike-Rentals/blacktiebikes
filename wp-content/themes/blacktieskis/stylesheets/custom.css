@@ -3643,7 +3643,16 @@ html body .mod-book-ski .btn-outline-primary:focus {
 }
 #products .row { min-height: 0; }
 #products .home-jumbotron { margin-bottom: 0; padding-bottom: 0; }
-#products .entry-title { font-size: 2rem; }
+/* Heading + subheading match the value-props section typography. */
+#products .entry-title { font-size: clamp(1.8rem, calc(4px + 3vw), 3rem); color: #282828; }
+#products .col-sm-12 > p:first-of-type {
+  color: #333;
+  font-size: 1rem;
+  line-height: 1.6;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
 #products .adv-products {
   display: flex;
   justify-content: center;
@@ -3662,9 +3671,11 @@ html body .mod-book-ski .btn-outline-primary:focus {
 }
 #products .adv-product__label {
   display: block;
+  width: 100%;
+  text-align: center;
   margin-top: 1rem;
   font-weight: 700;
-  font-size: 1.25rem;
+  font-size: 1.5rem;
   letter-spacing: 0.5px;
 }
 #products .adv-products__sub { margin-top: 3rem; }
@@ -3678,5 +3689,43 @@ html body .mod-book-ski .btn-outline-primary:focus {
 @media (max-width: 767px) {
   #products .adv-products { flex-direction: column; align-items: center; gap: 2.5rem; }
   #products .adv-product__img { width: 280px; height: 280px; }
-  #products .entry-title { font-size: 1.5rem; }
+}
+
+/* WW-54: optional Gallery section — images styled as Explore cards (reuses the
+   Explore .explore-card + slider/grid; slider when >3, row otherwise). Click to
+   enlarge via a shared lightbox. Only renders when images are added. */
+.mod-gallery { padding: 60px 0; }
+.mod-gallery .gallery__heading { margin-bottom: 1.5rem; }
+/* image-only tiles: shorter than the 425px explore card, no body divider */
+.mod-gallery .gallery-card { height: 300px; cursor: pointer; }
+.mod-gallery .gallery-card .explore-card__img { border-bottom: none; flex: 1; }
+/* Match the Explore/Gear contained width — FAQ + Gallery were full-width .container */
+.mod-faqs .container,
+.mod-gallery .container {
+  max-width: 1200px;
+  padding-left: clamp(20px, 10%, 120px);
+  padding-right: clamp(20px, 10%, 120px);
+}
+.gallery-lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 99999;
+  background: rgba(0, 0, 0, 0.9);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 30px;
+}
+.gallery-lightbox[hidden] { display: none; }
+.gallery-lightbox__img { max-width: 92vw; max-height: 90vh; border-radius: 4px; }
+.gallery-lightbox__close {
+  position: absolute;
+  top: 16px;
+  right: 28px;
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 2.5rem;
+  line-height: 1;
+  cursor: pointer;
 }
