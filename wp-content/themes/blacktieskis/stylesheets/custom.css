@@ -3410,6 +3410,7 @@ html body .mod-book-ski .btn-outline-primary:focus {
 }
 .lp-category__heading {
   margin-bottom: 40px;
+  text-align: center;
 }
 .lp-rec {
   display: flex;
