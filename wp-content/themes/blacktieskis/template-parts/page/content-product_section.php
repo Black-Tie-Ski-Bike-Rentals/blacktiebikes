@@ -31,7 +31,8 @@ if($pageid==20){ ?>
 
     
 		  <div class="home-jumbotron jumbotron">
-		  <h1 class="entry-title" style="text-align:center;"><?php echo $heading; ?></h1>
+		  <?php $bt_htag = ( $pageid == 20 ) ? 'h2' : 'h1'; // WW-25: homepage Adventure Products heading is an H2 ?>
+		  <<?php echo $bt_htag; ?> class="entry-title" style="text-align:center;"><?php echo $heading; ?></<?php echo $bt_htag; ?>>
 		 
                 <div class="row">
                     <div class="col-sm-12">

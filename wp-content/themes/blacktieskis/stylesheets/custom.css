@@ -3630,3 +3630,49 @@ html body .mod-book-ski .btn-outline-primary:focus {
 @media (max-width: 767px) {
   .mod-about-content h2 { font-size: 2rem; }
 }
+
+/* WW-25 Adventure Products (homepage #products) — H2 @2rem, 3 round images
+   (Bikes/Paddle/4x4) centered, "Explore premium gear" line + Book Now CTA. */
+#products .entry-title { font-size: 2rem; }
+#products .adv-products {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 3rem;
+  margin: 2.5rem auto 1.5rem;
+}
+#products .adv-product { text-align: center; }
+#products .adv-product__img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  display: block;
+  margin: 0 auto;
+}
+#products .adv-product__label {
+  display: block;
+  margin-top: 1rem;
+  font-weight: 700;
+  font-size: 1.25rem;
+  letter-spacing: 0.5px;
+}
+#products .adv-products__sub { margin-top: 1.5rem; }
+#products .newcl { margin-top: 1rem; }
+#products .newcl a.popup-is-open {
+  display: inline-block;
+  background: #256bb2;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  padding: 12px 34px;
+  border-radius: 4px;
+  text-decoration: none;
+}
+#products .newcl a.popup-is-open:hover { background: #1d5896; }
+@media (max-width: 767px) {
+  #products .adv-products { flex-direction: column; align-items: center; gap: 2rem; }
+  #products .adv-product__img { width: 160px; height: 160px; }
+  #products .entry-title { font-size: 1.5rem; }
+}
