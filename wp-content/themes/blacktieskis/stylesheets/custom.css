@@ -3411,6 +3411,9 @@ html body .mod-book-ski .btn-outline-primary:focus {
 .lp-category__heading {
   margin-bottom: 40px;
   text-align: center;
+  font-size: 1.875rem;
+  color: var(--color-text);
+  line-height: 1.2;
 }
 .lp-rec {
   display: flex;
@@ -3436,8 +3439,13 @@ html body .mod-book-ski .btn-outline-primary:focus {
   flex: 1;
 }
 .lp-rec__title {
-  font-size: 1.125rem;
+  font-size: 1.3rem;
+  color: var(--color-text);
   margin-bottom: 12px;
+}
+.lp-rec__desc {
+  color: var(--color-text);
+  line-height: 1.6;
 }
 .lp-rec__desc > *:last-child {
   margin-bottom: 0;
@@ -3463,7 +3471,10 @@ html body .mod-book-ski .btn-outline-primary:focus {
   .lp-rec--reverse {
     flex-direction: column;
     gap: 20px;
-    margin-bottom: 40px;
+    margin-bottom: 56px;
+  }
+  .lp-rec__title {
+    font-size: 20px;
   }
   .lp-rec__body {
     order: 1;
