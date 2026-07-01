@@ -3963,3 +3963,41 @@ h6, .h6 { font-size: var(--fs-small); }
     padding-bottom: 34px;
   }
 }
+
+/* --- WW-24 feedback (2026-07-01): hover/active cleanup + map/sidebar sizing --- */
+
+/* No hover feedback on the location list — states change on click only. */
+.location-left-filter li:hover,
+.location-left-filter ul:hover,
+.location-left-filter .list-location-parent li a:hover {
+  color: #000;
+  background: transparent;
+  text-decoration: none;
+}
+/* Active (clicked) state: green highlight + white text, and it stays white on
+   hover (the base CSS was flipping the text back to black on hover). */
+.location-left-filter .list-location-parent .active a,
+.location-left-filter .list-location-parent .active a:hover {
+  background: var(--color-green);
+  color: #fff;
+}
+
+/* Sidebar a touch smaller */
+.location-left-filter .list-location-parent {
+  font-size: var(--fs-body);
+}
+.location-left-filter .list-location-parent li a {
+  padding: 4px 22px;
+}
+
+/* Desktop: taller map + a scrollable list so an expanded state's dropdown can't
+   run past the map and get cut off. */
+@media (min-width: 992px) {
+  .mod-location-map .map {
+    min-height: 700px;
+  }
+  .location-left-filter .list-location-parent {
+    max-height: 600px;
+    overflow-y: auto;
+  }
+}
