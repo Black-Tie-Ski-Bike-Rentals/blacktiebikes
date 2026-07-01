@@ -3702,7 +3702,10 @@ html body .mod-book-ski .btn-outline-primary:focus {
    Explore .explore-card + slider/grid; slider when >3, row otherwise). Click to
    enlarge via a shared lightbox. Only renders when images are added. */
 .mod-gallery { padding: 60px 0; }
-.mod-gallery .gallery__heading { margin-bottom: 1.5rem; }
+/* Match the Explore section's heading -> subheading rhythm (custom.css:2394). */
+.mod-gallery .gallery__heading { margin-bottom: 0.375rem; }
+/* No subheading present? Restore the full gap down to the images. */
+.mod-gallery:not(:has(.gallery__sub)) .gallery__heading { margin-bottom: 2.5rem; }
 /* image-only tiles: shorter than the 425px explore card, no body divider */
 .mod-gallery .gallery-card { height: 300px; cursor: pointer; }
 .mod-gallery .gallery-card .explore-card__img { border-bottom: none; flex: 1; }
@@ -3767,13 +3770,30 @@ html body .mod-book-ski .btn-outline-primary:focus {
   }
 }
 
+/* WW-54: Gallery tiles have no text body, so the shared Explore mobile
+   "150px | 1fr" mini-card grid (custom.css ~2654) strands the image in a
+   narrow left column. Keep gallery tiles as full-width image tiles instead. */
+@media (max-width: 991px) {
+  .mod-gallery .gallery-card {
+    display: block;
+    height: 240px;
+  }
+  /* display:block drops the flex context, so the image container needs an
+     explicit height for object-fit:cover to crop/fill (otherwise the photo
+     shows at natural height and letterboxes). */
+  .mod-gallery .gallery-card .explore-card__img {
+    height: 100%;
+  }
+}
+
 /* ============================================
-   WW-6: Location-page type scale (consolidation)
-   Four fluid sizes — large on desktop, smaller on mobile —
-   scoped to location pages only. Supersedes the older
-   per-section font-sizes in the Explore/FAQ blocks above.
+   WW-6: Site type scale (design tokens)
+   Fluid sizes — large on desktop, smaller on mobile.
+   Defined globally; applied to location sections here and
+   (minimally) to the homepage. Additional tokens below cover
+   homepage sizes that sit between the core four.
    ============================================ */
-body.page-template-page-location {
+:root {
   --fs-display: clamp(1.8rem, calc(4px + 3vw), 3rem);
   --fs-heading: clamp(1.375rem, calc(0.9rem + 2.2vw), 1.875rem);
   --fs-body:    clamp(1rem, calc(0.9rem + 0.5vw), 1.125rem);

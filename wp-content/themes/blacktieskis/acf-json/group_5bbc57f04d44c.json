@@ -1996,6 +1996,26 @@
                             "append": ""
                         },
                         {
+                            "key": "field_gallery_subheading",
+                            "label": "Subheading (optional)",
+                            "name": "gallery_subheading",
+                            "aria-label": "",
+                            "type": "text",
+                            "instructions": "",
+                            "required": false,
+                            "conditional_logic": false,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "maxlength": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": ""
+                        },
+                        {
                             "key": "field_gallery_images",
                             "label": "Images",
                             "name": "gallery_images",
@@ -2064,6 +2084,6 @@
     "display_title": "",
     "allow_ai_access": false,
     "ai_description": "",
-    "modified": 1782857652,
+    "modified": 1782927936,
     "local_file": "\/Users\/lauralong\/Local Sites\/blacktiebikes-sent\/app\/public\/wp-content\/themes\/blacktieskis\/acf-json\/group_5bbc57f04d44c.json"
 }

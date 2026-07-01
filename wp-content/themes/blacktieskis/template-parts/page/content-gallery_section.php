@@ -11,8 +11,9 @@
  * slider JS (javascripts/custom.js → every .explore-slider-wrap) initializes it.
  */
 
-$heading = get_sub_field( 'gallery_heading' );
-$images  = get_sub_field( 'gallery_images' );
+$heading    = get_sub_field( 'gallery_heading' );
+$subheading = get_sub_field( 'gallery_subheading' );
+$images     = get_sub_field( 'gallery_images' );
 
 if ( empty( $images ) ) {
 	return;
@@ -36,6 +37,10 @@ $card = function ( $img ) {
   <div class="container">
     <?php if ( $heading ) : ?>
       <h2 class="explore-section__heading gallery__heading"><?php echo esc_html( $heading ); ?></h2>
+    <?php endif; ?>
+
+    <?php if ( $subheading ) : ?>
+      <p class="explore-section__sub gallery__sub"><?php echo esc_html( $subheading ); ?></p>
     <?php endif; ?>
 
     <?php if ( $slider ) : ?>
