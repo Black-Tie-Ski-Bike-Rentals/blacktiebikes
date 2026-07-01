@@ -2116,7 +2116,7 @@ html.html-popup-content .popup-inner > p a:hover {
 .btb-hero__content h2,
 .btb-hero__content h2 em {
   color: #fff;
-  font-size: var(--fs-hero-sub) !important;
+  font-size: var(--fs-lead) !important;
   font-weight: 400;
   line-height: 1.4;
   font-style: normal !important;
@@ -2221,7 +2221,7 @@ html.html-popup-content .popup-inner > p a:hover {
 /* H2 */
 .page-template-page-location .mod-hero-image .content h2 {
   color: #fff;
-  font-size: var(--fs-hero-sub) !important;
+  font-size: var(--fs-lead) !important;
   font-weight: 400;
   font-style: italic !important;
   line-height: 1.4 !important;
@@ -2340,7 +2340,7 @@ html.html-popup-content .popup-inner > p a:hover {
 
 .page-template-default.page-child .mod-hero-image .content h2 {
   color: #fff;
-  font-size: var(--fs-hero-sub) !important;
+  font-size: var(--fs-lead) !important;
   font-weight: 400;
   font-style: italic !important;
   line-height: 1.4 !important;
@@ -2883,7 +2883,7 @@ html.html-popup-content .popup-inner > p a:hover {
 }
 .steps-headline h3 {
   /* Match the hero subtitle size */
-  font-size: var(--fs-hero-sub);
+  font-size: var(--fs-lead);
   color: #333;
   font-weight: 400;
   margin-bottom: 0;
@@ -3798,11 +3798,10 @@ html body .mod-book-ski .btn-outline-primary:focus {
    ============================================ */
 :root {
   --fs-hero:     clamp(1.45rem, calc(4px + 4.2vw), 4rem);             /* 23 → 64  homepage hero H1 */
-  --fs-hero-sub: clamp(0.8rem, calc(6px + 0.69vw), 1rem);            /* 13 → 16  hero subtitle */
   --fs-h1:       clamp(1.8rem, calc(4px + 3vw), 3rem);               /* 29 → 48  page/section headings, all heroes */
   --fs-h2:       clamp(1.4375rem, calc(1.23rem + 0.86vw), 1.875rem); /* 23 → 30  sub-headings, base h2 */
   --fs-h3:       clamp(1.25rem, calc(1.226rem + 0.1vw), 1.3rem);     /* 20 → 20.8 card titles, .lead */
-  --fs-lead:     clamp(1.0625rem, calc(1.033rem + 0.12vw), 1.125rem);/* 17 → 18  intro/lead, base h3/h4 */
+  --fs-lead:     clamp(1.0625rem, calc(1.033rem + 0.12vw), 1.125rem);/* 17 → 18  intro/lead, base h3/h4, hero subtitles */
   --fs-body:     1rem;                                               /* 16      body copy, base h5, buttons (flat) */
   --fs-small:    clamp(0.8rem, calc(0.764rem + 0.15vw), 0.875rem);   /* 12.8 → 14 captions, footer, base h6, small UI */
 }
@@ -3858,7 +3857,7 @@ h6, .h6 { font-size: var(--fs-small); }
 }
 .page-id-20 .btb-hero__content h2,
 .page-id-20 .btb-hero__content h2 em {
-  font-size: var(--fs-hero-sub) !important;
+  font-size: var(--fs-lead) !important;
 }
 
 /* Big section headings */
