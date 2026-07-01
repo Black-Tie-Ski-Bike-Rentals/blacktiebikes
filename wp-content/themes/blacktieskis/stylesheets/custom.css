@@ -3676,7 +3676,7 @@ html body .mod-book-ski .btn-outline-primary:focus {
   margin-top: 1rem;
   font-weight: 700;       /* match the How It Works step titles (h2) */
   font-size: var(--fs-xl);    /* = base h2 / step-title size */
-  color: #282828;         /* match the step titles' dark gray (not solid black) */
+  color: var(--color-text);   /* WW-25: match the subheading gray (#333), not the darker heading gray */
 }
 #products .adv-products__sub { margin-top: 3rem; color: #333; font-weight: 500; }
 /* Homepage typography consistency: one dark gray (#282828) + flat 1rem small text */
@@ -4003,9 +4003,25 @@ h6, .h6 { font-size: var(--fs-xs); }
   transform: none !important;
   position: static !important;
   height: auto !important;
+  margin-right: 0 !important;  /* was reserving space for the (now removed) scrollbar */
+  padding-right: 0 !important;
 }
 .location-left-filter .mCSB_scrollTools {
   display: none !important;
+}
+
+/* Full-bleed rows: drop the list's left inset so the separator lines AND the
+   green active highlight reach both edges of the panel. */
+.location-left-filter .list-location-parent {
+  padding-left: 0;
+}
+/* Headroom above the first state (mirrors the space below the last one), without
+   a stray separator line floating in that gap. */
+.location-left-filter .list-location-parent {
+  padding-top: 16px;
+}
+.location-left-filter .list-location-parent > li.location-parent:first-child {
+  border-top: 0;
 }
 
 @media (min-width: 992px) {
