@@ -59,7 +59,7 @@ ul.accordion-list li h3 {
   margin: 0;
   cursor: pointer;
   color: #fff;
-  font-size: var(--fs-lead);
+  font-size: var(--fs-md);
 }
 ul.accordion-list li h3:after {
   content: '';
@@ -99,14 +99,14 @@ ul.accordion-list li div.answer p {
 }
 .mod-faqs .faqs__heading {
   text-align: left;          /* left-align heading */
-  font-size: var(--fs-h2);       /* match other location section headings (.explore-section__heading) */
+  font-size: var(--fs-xl);       /* match other location section headings (.explore-section__heading) */
   color: var(--color-heading);
   line-height: 1.2;
   margin-bottom: 8px;
 }
 .mod-faqs .faqs__sub {
   text-align: left;
-  font-size: var(--fs-small);       /* match section sub-headings (.explore-section__sub) */
+  font-size: var(--fs-xs);       /* match section sub-headings (.explore-section__sub) */
   color: var(--color-text);
   line-height: 1.6;
   margin-bottom: 28px;
@@ -116,7 +116,7 @@ ul.accordion-list li div.answer p {
 }
 @media (max-width: 767px) {
   .mod-faqs { padding: 40px 0; }
-  .mod-faqs .faqs__heading { font-size: var(--fs-h2); }
+  .mod-faqs .faqs__heading { font-size: var(--fs-xl); }
 }
 .page-id-33841 .mod-about .row,
 .page-id-34224 .mod-about .row,
@@ -350,7 +350,7 @@ body div.gform_wrapper div.gform_body select {
   cursor: pointer;
 }
 #main-menu .btn {
-  font-size: var(--fs-small);
+  font-size: var(--fs-xs);
   /* padding: 4px 27px; */
   letter-spacing: 0.0625rem;
   background: #568f3b;
@@ -406,7 +406,7 @@ body div.gform_wrapper div.gform_body select {
 
 .mod-hero-image .content h1 {
   color: #fff;
-  font-size: var(--fs-h1);
+  font-size: var(--fs-2xl);
   margin: 0 auto 15px;
 }
 
@@ -716,7 +716,7 @@ body div.gform_wrapper div.gform_body select {
   min-width: 175px;
   margin: 6px;
   padding: 12px 30px;
-  font-size: var(--fs-body);
+  font-size: var(--fs-sm);
 }
 .mod-book-ski .btn:first-of-type {
   margin: 0;
@@ -730,7 +730,7 @@ body div.gform_wrapper div.gform_body select {
   text-transform: uppercase;
   display: inline-block;
   text-decoration: none;
-  font-size: var(--fs-body);
+  font-size: var(--fs-sm);
   vertical-align: middle;
   transition: all 0.3s ease !important;
 }
@@ -813,7 +813,7 @@ html.popup-animation .popup-careers.popup-inner,
     padding: 30px !important;
   }
   .popup-careers .career-content p {
-    font-size: var(--fs-small);
+    font-size: var(--fs-xs);
   }
 }
 .popup-careers .career-content,
@@ -847,7 +847,7 @@ html.popup-animation .popup-careers.popup-inner,
   padding: 8px 30px !important;
   font-family: Poppins, sans-serif !important;
   font-weight: 700 !important;
-  font-size: var(--fs-lead) !important;
+  font-size: var(--fs-md) !important;
   vertical-align: middle !important;
   width: auto !important;
   transition: all 0.3s ease !important;
@@ -923,7 +923,7 @@ html.popup-animation .popup-careers.popup-inner,
   background-color: var(--color-green);
   color: white;
   padding: 16px;
-  font-size: var(--fs-body);
+  font-size: var(--fs-sm);
   border: none;
 }
 .dropdown {
@@ -1050,7 +1050,7 @@ html.popup-animation .popup-inner {
    intentionally NOT touched here — it's already compact. */
 @media (max-width: 360px) {
   #boonowbutton {
-    font-size: var(--fs-small);
+    font-size: var(--fs-xs);
     padding: 9px 16px !important;
   }
   .container,
@@ -1341,7 +1341,7 @@ html {
 
   /* Compact menu items so locations list fits without scrolling */
   html.is-open-menu .main-menu-ul > li > a {
-    font-size: var(--fs-lead) !important;
+    font-size: var(--fs-md) !important;
     letter-spacing: 0 !important;
     padding-top: 1px !important;
     padding-bottom: 1px !important;
@@ -1368,7 +1368,7 @@ html {
   /* Sub-menu link: match main menu item size, lighter weight (500),
      generous vertical padding for spacing + larger tap targets */
   html.is-open-menu .main-menu-ul .sub-menu li a {
-    font-size: var(--fs-lead) !important;
+    font-size: var(--fs-md) !important;
     font-weight: 500 !important;
     padding-top: 4px !important;
     padding-bottom: 4px !important;
@@ -1909,7 +1909,7 @@ h6,
   color: #fff !important;
   padding: 12px 30px !important;
   text-decoration: none !important;
-  font-size: var(--fs-body) !important;
+  font-size: var(--fs-sm) !important;
   vertical-align: middle !important;
   transition: all 0.3s ease !important;
 }
@@ -1930,7 +1930,7 @@ html.html-popup-content .cont-background-opacity {
 }
 
 html.html-popup-content .popup-inner > h3 {
-  font-size: var(--fs-lead);
+  font-size: var(--fs-md);
   font-weight: bold;
   margin: 1rem;
   text-transform: uppercase;
@@ -1952,7 +1952,7 @@ html.html-popup-content .popup-inner p {
 html.html-popup-content .popup-inner > p a {
   color: #568f3b;
   text-decoration: underline;
-  font-size: var(--fs-lead);
+  font-size: var(--fs-md);
   display: block;
   margin-bottom: 10px;
   line-height: 1.5 !important;
@@ -1968,11 +1968,11 @@ html.html-popup-content .popup-inner > p a:hover {
     padding-top: 30px;
   }
   html.html-popup-content .popup-inner {
-    font-size: var(--fs-body);
+    font-size: var(--fs-sm);
   }
   html.html-popup-content .popup-inner > h3,
   html.html-popup-content .popup-inner > p a {
-    font-size: var(--fs-body);
+    font-size: var(--fs-sm);
   }
 }
 
@@ -2106,7 +2106,7 @@ html.html-popup-content .popup-inner > p a:hover {
    At widths >= ~457px the computed size is unchanged from before. */
 .btb-hero__content h1 {
   color: #fff;
-  font-size: var(--fs-hero) !important;
+  font-size: var(--fs-3xl) !important;
   line-height: 1.15;
   margin: 0 0 15px;
 }
@@ -2116,7 +2116,7 @@ html.html-popup-content .popup-inner > p a:hover {
 .btb-hero__content h2,
 .btb-hero__content h2 em {
   color: #fff;
-  font-size: var(--fs-lead) !important;
+  font-size: var(--fs-md) !important;
   font-weight: 400;
   line-height: 1.4;
   font-style: normal !important;
@@ -2213,7 +2213,7 @@ html.html-popup-content .popup-inner > p a:hover {
 /* H1 */
 .page-template-page-location .mod-hero-image .content h1 {
   color: #fff;
-  font-size: var(--fs-h1) !important;
+  font-size: var(--fs-2xl) !important;
   line-height: 1.15 !important;
   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
 }
@@ -2221,7 +2221,7 @@ html.html-popup-content .popup-inner > p a:hover {
 /* H2 */
 .page-template-page-location .mod-hero-image .content h2 {
   color: #fff;
-  font-size: var(--fs-lead) !important;
+  font-size: var(--fs-md) !important;
   font-weight: 400;
   font-style: italic !important;
   line-height: 1.4 !important;
@@ -2266,7 +2266,7 @@ html.html-popup-content .popup-inner > p a:hover {
     padding: 140px 35px 0 !important;
   }
   .page-template-page-location .mod-hero-image .content h1 {
-    font-size: var(--fs-h1) !important;
+    font-size: var(--fs-2xl) !important;
   }
   /* background-position is set via inline style (ACF hero_bg_position field) */
 }
@@ -2333,14 +2333,14 @@ html.html-popup-content .popup-inner > p a:hover {
 
 .page-template-default.page-child .mod-hero-image .content h1 {
   color: #fff;
-  font-size: var(--fs-h1) !important;
+  font-size: var(--fs-2xl) !important;
   line-height: 1.15 !important;
   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
 }
 
 .page-template-default.page-child .mod-hero-image .content h2 {
   color: #fff;
-  font-size: var(--fs-lead) !important;
+  font-size: var(--fs-md) !important;
   font-weight: 400;
   font-style: italic !important;
   line-height: 1.4 !important;
@@ -2353,7 +2353,7 @@ html.html-popup-content .popup-inner > p a:hover {
     padding: 140px 35px 0 !important;
   }
   .page-template-default.page-child .mod-hero-image .content h1 {
-    font-size: var(--fs-h1) !important;
+    font-size: var(--fs-2xl) !important;
   }
 }
 
@@ -2389,14 +2389,14 @@ html.html-popup-content .popup-inner > p a:hover {
 
 .explore-section__heading {
   font-family: 'Garnett', Georgia, serif !important;
-  font-size: var(--fs-h2);
+  font-size: var(--fs-xl);
   color: var(--color-heading);
   margin-bottom: 0.375rem;
   line-height: 1.2;
 }
 
 .explore-section__sub {
-  font-size: var(--fs-small);
+  font-size: var(--fs-xs);
   color: var(--color-text);
   line-height: 1.6;
   margin-bottom: 2.5rem;
@@ -2423,7 +2423,7 @@ html.html-popup-content .popup-inner > p a:hover {
 
 .explore-cat-cta {
   font-family: 'Garnett', Georgia, serif !important;
-  font-size: var(--fs-small);
+  font-size: var(--fs-xs);
   font-weight: 600;
   color: var(--color-green) !important;
   text-decoration: underline !important;
@@ -2475,7 +2475,7 @@ html.html-popup-content .popup-inner > p a:hover {
 
 .explore-card__title {
   font-family: 'Garnett', Georgia, serif !important;
-  font-size: var(--fs-lead);
+  font-size: var(--fs-md);
   font-weight: 700;
   color: var(--color-heading);
   margin-bottom: 3px;
@@ -2483,7 +2483,7 @@ html.html-popup-content .popup-inner > p a:hover {
 }
 
 .explore-card__desc {
-  font-size: var(--fs-small);
+  font-size: var(--fs-xs);
   color: var(--color-text);
   line-height: 1.55;
   margin-bottom: 0;
@@ -2616,7 +2616,7 @@ html.html-popup-content .popup-inner > p a:hover {
 
 .explore-featured__title {
   font-family: 'Garnett', Georgia, serif !important;
-  font-size: var(--fs-lead);
+  font-size: var(--fs-md);
   font-weight: 700;
   color: var(--color-heading);
   line-height: 1.2;
@@ -2624,7 +2624,7 @@ html.html-popup-content .popup-inner > p a:hover {
 }
 
 .explore-featured__desc {
-  font-size: var(--fs-small);
+  font-size: var(--fs-xs);
   color: var(--color-text);
   line-height: 1.6;
   max-width: 100%;
@@ -2638,7 +2638,7 @@ html.html-popup-content .popup-inner > p a:hover {
   }
 
   .explore-section__heading {
-    font-size: var(--fs-h2);
+    font-size: var(--fs-xl);
   }
 
   .explore-section__sub {
@@ -2725,7 +2725,7 @@ html.html-popup-content .popup-inner > p a:hover {
   }
 
   .explore-featured__desc {
-    font-size: var(--fs-small);
+    font-size: var(--fs-xs);
     max-width: none;
     margin-bottom: 0;
   }
@@ -2742,12 +2742,12 @@ html.html-popup-content .popup-inner > p a:hover {
   .explore-card__title,
   .explore-featured__title {
     /* Keep titles uniform with the other sections at every breakpoint */
-    font-size: var(--fs-lead);
+    font-size: var(--fs-md);
   }
 
   .explore-card__desc,
   .explore-featured__desc {
-    font-size: var(--fs-small);
+    font-size: var(--fs-xs);
     -webkit-line-clamp: 2;
   }
 }
@@ -2773,7 +2773,7 @@ html.html-popup-content .popup-inner > p a:hover {
 
 .popup-header {
   background: #568f3b !important;
-  font-size: var(--fs-small);
+  font-size: var(--fs-xs);
   font-weight: 500;
   max-height: 56px;
 }
@@ -2836,13 +2836,13 @@ html.html-popup-content .popup-inner > p a:hover {
   padding: 60px 15px;
 }
 .location-map-headline h2 {
-  font-size: var(--fs-h2);
+  font-size: var(--fs-xl);
   padding: 0;
   margin-bottom: 12px;
   text-transform: uppercase !important;
 }
 .location-map-headline h3 {
-  font-size: var(--fs-lead);
+  font-size: var(--fs-md);
   color: #fff;
   font-weight: 400;
   margin-bottom: 28px;
@@ -2875,7 +2875,7 @@ html.html-popup-content .popup-inner > p a:hover {
 }
 .steps-headline h2 {
   /* Scale with viewport like the hero H1 */
-  font-size: var(--fs-h1);
+  font-size: var(--fs-2xl);
   padding: 0;
   margin-bottom: 12px;
   text-transform: uppercase !important;
@@ -2883,7 +2883,7 @@ html.html-popup-content .popup-inner > p a:hover {
 }
 .steps-headline h3 {
   /* Match the hero subtitle size */
-  font-size: var(--fs-lead);
+  font-size: var(--fs-md);
   color: #333;
   font-weight: 400;
   margin-bottom: 0;
@@ -2925,14 +2925,14 @@ html.html-popup-content .popup-inner > p a:hover {
   padding: 20px;
 }
 .newsletter-callout h3 {
-  font-size: var(--fs-lead);
+  font-size: var(--fs-md);
   font-weight: 700;
   margin-bottom: 10px;
   color: #fff;
   text-transform: uppercase !important;
 }
 .newsletter-callout p {
-  font-size: var(--fs-body);
+  font-size: var(--fs-sm);
   margin-bottom: 0;
   color: #ccc;
 }
@@ -2953,7 +2953,7 @@ html.html-popup-content .popup-inner > p a:hover {
   outline: none;
   color: #333;
   padding: 10px 12px;
-  font-size: var(--fs-small);
+  font-size: var(--fs-xs);
   min-width: 0;
 }
 .newsletter-form input[type="email"]::placeholder {
@@ -2966,7 +2966,7 @@ html.html-popup-content .popup-inner > p a:hover {
   border-radius: 6px;
   padding: 10px 20px;
   font-weight: 400;
-  font-size: var(--fs-small);
+  font-size: var(--fs-xs);
   text-transform: none;
   cursor: pointer;
   white-space: nowrap;
@@ -3107,7 +3107,7 @@ html body .mod-book-ski .btn-outline-primary:focus {
   margin-bottom: 6px;
 }
 .gear-subheading {
-  font-size: var(--fs-small);
+  font-size: var(--fs-xs);
   color: var(--color-text);
   line-height: 1.6;
   margin-bottom: 32px;
@@ -3140,7 +3140,7 @@ html body .mod-book-ski .btn-outline-primary:focus {
   padding: 30px;
 }
 .gear-card__title {
-  font-size: var(--fs-lead);
+  font-size: var(--fs-md);
   margin-bottom: 16px;
 }
 .gear-card__list {
@@ -3175,7 +3175,7 @@ html body .mod-book-ski .btn-outline-primary:focus {
   max-width: 100%;
 }
 .gear-location-info__heading {
-  font-size: var(--fs-lead);
+  font-size: var(--fs-md);
   margin-bottom: 16px;
 }
 
@@ -3217,7 +3217,7 @@ html body .mod-book-ski .btn-outline-primary:focus {
     padding: 50px 0;
   }
   .gear-heading {
-    font-size: var(--fs-h2);
+    font-size: var(--fs-xl);
   }
   .gear-subheading {
     margin-bottom: 24px;
@@ -3247,7 +3247,7 @@ html body .mod-book-ski .btn-outline-primary:focus {
   margin-bottom: 0;
 }
 .value-props__sub {
-  font-size: var(--fs-small);
+  font-size: var(--fs-xs);
   margin: 8px 0 0;
   color: var(--color-text);
 }
@@ -3277,12 +3277,12 @@ html body .mod-book-ski .btn-outline-primary:focus {
   display: block;
 }
 .value-prop__title {
-  font-size: var(--fs-lead);
+  font-size: var(--fs-md);
   margin-bottom: 12px;
 }
 .value-prop__desc {
   margin-bottom: 0;
-  font-size: var(--fs-small);
+  font-size: var(--fs-xs);
   color: var(--color-text);
 }
 .value-props__cta {
@@ -3294,7 +3294,7 @@ html body .mod-book-ski .btn-outline-primary:focus {
     padding: 50px 0;
   }
   .value-props__heading {
-    font-size: var(--fs-h2);
+    font-size: var(--fs-xl);
   }
   .value-props__header {
     flex-direction: column;
@@ -3334,12 +3334,12 @@ html body .mod-book-ski .btn-outline-primary:focus {
 }
 .service-hero__heading {
   color: #fff;
-  font-size: var(--fs-h1);
+  font-size: var(--fs-2xl);
   margin-bottom: 12px;
 }
 .service-hero__sub {
   color: #fff;
-  font-size: var(--fs-lead);
+  font-size: var(--fs-md);
   margin-bottom: 24px;
 }
 .mod-service-intro {
@@ -3371,7 +3371,7 @@ html body .mod-book-ski .btn-outline-primary:focus {
 .service-product__heading {
   margin: 12px 0 16px;
   text-align: left;
-  font-size: var(--fs-h3);
+  font-size: var(--fs-lg);
 }
 .mod-service-faqs {
   padding: 60px 0;
@@ -3384,7 +3384,7 @@ html body .mod-book-ski .btn-outline-primary:focus {
   padding: 80px 0;
 }
 .service-comingsoon__heading {
-  font-size: var(--fs-h2);
+  font-size: var(--fs-xl);
   margin-bottom: 12px;
 }
 .service-comingsoon__text {
@@ -3408,7 +3408,7 @@ html body .mod-book-ski .btn-outline-primary:focus {
     flex: 0 0 100%;
   }
   .service-product__heading {
-    font-size: var(--fs-h3);
+    font-size: var(--fs-lg);
   }
 }
 
@@ -3427,7 +3427,7 @@ html body .mod-book-ski .btn-outline-primary:focus {
 .lp-category__heading {
   margin-bottom: 40px;
   text-align: center;
-  font-size: var(--fs-h2);
+  font-size: var(--fs-xl);
   color: var(--color-heading);
   line-height: 1.2;
 }
@@ -3455,7 +3455,7 @@ html body .mod-book-ski .btn-outline-primary:focus {
   flex: 1;
 }
 .lp-rec__title {
-  font-size: var(--fs-h3);
+  font-size: var(--fs-lg);
   color: var(--color-heading);
   margin-bottom: 12px;
 }
@@ -3479,7 +3479,7 @@ html body .mod-book-ski .btn-outline-primary:focus {
     margin-bottom: 48px;
   }
   .lp-category__heading {
-    font-size: var(--fs-h2);
+    font-size: var(--fs-xl);
     margin-bottom: 28px;
   }
   /* Stack with the image BELOW the description */
@@ -3490,7 +3490,7 @@ html body .mod-book-ski .btn-outline-primary:focus {
     margin-bottom: 56px;
   }
   .lp-rec__title {
-    font-size: var(--fs-h3);
+    font-size: var(--fs-lg);
   }
   .lp-rec__body {
     order: 1;
@@ -3613,17 +3613,17 @@ html body .mod-book-ski .btn-outline-primary:focus {
 }
 .mod-about-content h2 {
   color: #fff; /* was green #568f3b */
-  font-size: var(--fs-h2); /* location section-title size (homepage overrides bigger below) */
+  font-size: var(--fs-xl); /* location section-title size (homepage overrides bigger below) */
   line-height: 1.1;
   margin-bottom: 1.5rem;
 }
 /* Homepage "Our Story" is bigger like the other homepage titles; location stays 1.875rem */
-.page-id-20 .mod-about-content h2 { font-size: var(--fs-h1); }
+.page-id-20 .mod-about-content h2 { font-size: var(--fs-2xl); }
 /* Location-page section titles: one size + the site dark gray (Our Story stays white) */
 .gear-heading,
 .explore-section__heading,
 .faqs__heading {
-  font-size: var(--fs-h2);
+  font-size: var(--fs-xl);
   color: #282828;
 }
 /* Location-page subheadings: match the site sub gray */
@@ -3644,10 +3644,10 @@ html body .mod-book-ski .btn-outline-primary:focus {
 #products .row { min-height: 0; }
 #products .home-jumbotron { margin-bottom: 0; padding-bottom: 0; }
 /* Heading + subheading match the value-props section typography. */
-#products .entry-title { font-size: var(--fs-h1); color: #282828; }
+#products .entry-title { font-size: var(--fs-2xl); color: #282828; }
 #products .adv-products__intro {
   color: #333;       /* match the value-props descriptions */
-  font-size: var(--fs-body);   /* = .step-item-content p (body size) */
+  font-size: var(--fs-sm);   /* = .step-item-content p (body size) */
   line-height: 1.6;
   max-width: 800px;
   margin-left: auto;
@@ -3675,16 +3675,16 @@ html body .mod-book-ski .btn-outline-primary:focus {
   text-align: center;
   margin-top: 1rem;
   font-weight: 700;       /* match the How It Works step titles (h2) */
-  font-size: var(--fs-h2);    /* = base h2 / step-title size */
+  font-size: var(--fs-xl);    /* = base h2 / step-title size */
   color: #282828;         /* match the step titles' dark gray (not solid black) */
 }
 #products .adv-products__sub { margin-top: 3rem; color: #333; font-weight: 500; }
 /* Homepage typography consistency: one dark gray (#282828) + flat 1rem small text */
 .step-item-content h2 { color: #282828; } /* step titles = same dark as section titles + image labels */
-.steps-headline h3 { font-size: var(--fs-body); }     /* How It Works sub = flat 1rem (was a clamp) */
+.steps-headline h3 { font-size: var(--fs-sm); }     /* How It Works sub = flat 1rem (was a clamp) */
 /* Map section: "Ready to get started?" = section-title size/weight, "Book your gear…" = sub size (stay white on the map bg) */
-.mod-location-map h2 { font-size: var(--fs-h1); font-weight: 700; }
-.mod-location-map h3 { font-size: var(--fs-body); }
+.mod-location-map h2 { font-size: var(--fs-2xl); font-weight: 700; }
+.mod-location-map h3 { font-size: var(--fs-sm); }
 #products .newcl { margin-top: 1rem; }
 /* CTA reuses the global #boonowbutton styling (padding/radius/font/transition);
    just flip the colors for this instance: blue at rest, theme green on hover.
@@ -3787,23 +3787,22 @@ html body .mod-book-ski .btn-outline-primary:focus {
 }
 
 /* ============================================
-   WW-6: Site-wide type scale (8 fluid tokens)
-   One shared scale for the whole site. Each step is a clamp()
-   that scales large-on-desktop → smaller-on-mobile in a single
-   value. Applied via the global base block below (h1–h6/body/
-   .lead) plus a few scoped exceptions. Icon glyphs & decorative
-   numerals are NOT on the scale — they keep their own sizes.
-   Anchors tuned so mapped elements land within ~2px at a 390px
-   viewport (clamp min) and 1200px+ (clamp max).
+   WW-6: Site-wide type scale (7 fluid tokens, t-shirt sizes)
+   One shared scale for the whole site, smallest → largest. Each
+   step is a clamp() that grows from its PHONE size to its DESKTOP
+   size in a single value. The comment on each line is  phone → desktop (px).
+   Applied via the global base block below (h1–h6/body/.lead) plus
+   a few scoped exceptions. Icon glyphs & decorative numerals are
+   NOT on the scale — they keep their own sizes.
    ============================================ */
 :root {
-  --fs-hero:     clamp(1.45rem, calc(4px + 4.2vw), 4rem);             /* 23 → 64  homepage hero H1 */
-  --fs-h1:       clamp(1.8rem, calc(4px + 3vw), 3rem);               /* 29 → 48  page/section headings, all heroes */
-  --fs-h2:       clamp(1.4375rem, calc(1.23rem + 0.86vw), 1.875rem); /* 23 → 30  sub-headings, base h2 */
-  --fs-h3:       clamp(1.25rem, calc(1.226rem + 0.1vw), 1.3rem);     /* 20 → 20.8 card titles, .lead */
-  --fs-lead:     clamp(1.0625rem, calc(1.033rem + 0.12vw), 1.125rem);/* 17 → 18  intro/lead, base h3/h4, hero subtitles */
-  --fs-body:     1rem;                                               /* 16      body copy, base h5, buttons (flat) */
-  --fs-small:    clamp(0.8rem, calc(0.764rem + 0.15vw), 0.875rem);   /* 12.8 → 14 captions, footer, base h6, small UI */
+  --fs-xs:  clamp(0.8rem, calc(0.764rem + 0.15vw), 0.875rem);   /* 12.8 → 14px   captions, footer, labels, base h6 */
+  --fs-sm:  1rem;                                               /*        16px   body copy, buttons, base h5 (flat) */
+  --fs-md:  clamp(1.0625rem, calc(1.033rem + 0.12vw), 1.125rem);/*   17 → 18px   intros, hero subtitles, base h3/h4 */
+  --fs-lg:  clamp(1.25rem, calc(1.226rem + 0.1vw), 1.3rem);     /*   20 → 20.8px card / image titles */
+  --fs-xl:  clamp(1.4375rem, calc(1.23rem + 0.86vw), 1.875rem); /*   23 → 30px   sub-headings, base h2 */
+  --fs-2xl: clamp(1.8rem, calc(4px + 3vw), 3rem);               /*   29 → 48px   page & section headings, internal heroes */
+  --fs-3xl: clamp(1.45rem, calc(4px + 4.2vw), 4rem);            /*   23 → 64px   homepage hero title */
 }
 
 /* ============================================
@@ -3813,26 +3812,26 @@ html body .mod-book-ski .btn-outline-primary:focus {
    these bare-element rules win on source order without !important,
    superseding app.css's hard h1→38px / h2→24px mobile steps.
    ============================================ */
-body { font-size: var(--fs-body); }
-h1, .h1 { font-size: var(--fs-h1); }
-h2, .h2 { font-size: var(--fs-h2); }
-h3, .h3 { font-size: var(--fs-lead); }   /* base h3 = 18px → lead band */
-h4, .h4 { font-size: var(--fs-lead); }   /* base h4 = 17px → lead band */
-h5, .h5 { font-size: var(--fs-body); }
-h6, .h6 { font-size: var(--fs-small); }
-.lead { font-size: var(--fs-h3); }
+body { font-size: var(--fs-sm); }
+h1, .h1 { font-size: var(--fs-2xl); }
+h2, .h2 { font-size: var(--fs-xl); }
+h3, .h3 { font-size: var(--fs-md); }   /* base h3 = 18px → lead band */
+h4, .h4 { font-size: var(--fs-md); }   /* base h4 = 17px → lead band */
+h5, .h5 { font-size: var(--fs-sm); }
+h6, .h6 { font-size: var(--fs-xs); }
+.lead { font-size: var(--fs-lg); }
 
 /* Section headings */
 .page-template-page-location .explore-section__heading,
 .page-template-page-location .mod-faqs .faqs__heading {
-  font-size: var(--fs-h2);
+  font-size: var(--fs-xl);
 }
 
 /* Card / featured titles + FAQ questions */
 .page-template-page-location .explore-card__title,
 .page-template-page-location .explore-featured__title,
 .page-template-page-location ul.accordion-list li h3 {
-  font-size: var(--fs-lead);
+  font-size: var(--fs-md);
 }
 
 /* Small text — descriptions, labels, CTAs, sub-headings */
@@ -3841,7 +3840,7 @@ h6, .h6 { font-size: var(--fs-small); }
 .page-template-page-location .explore-featured__desc,
 .page-template-page-location .explore-cat-cta,
 .page-template-page-location .mod-faqs .faqs__sub {
-  font-size: var(--fs-small);
+  font-size: var(--fs-xs);
 }
 
 /* ============================================
@@ -3853,11 +3852,11 @@ h6, .h6 { font-size: var(--fs-small); }
    ============================================ */
 /* Hero */
 .page-id-20 .btb-hero__content h1 {
-  font-size: var(--fs-hero) !important;
+  font-size: var(--fs-3xl) !important;
 }
 .page-id-20 .btb-hero__content h2,
 .page-id-20 .btb-hero__content h2 em {
-  font-size: var(--fs-lead) !important;
+  font-size: var(--fs-md) !important;
 }
 
 /* Big section headings */
@@ -3865,20 +3864,20 @@ h6, .h6 { font-size: var(--fs-small); }
 .page-id-20 .mod-location-map h2,
 .page-id-20 #products .entry-title,
 .page-id-20 .mod-about-content h2 {
-  font-size: var(--fs-h1);
+  font-size: var(--fs-2xl);
 }
 
 /* Sub-headings (step titles, product labels, CTA headline) */
 .page-id-20 .step-item-content h2,
 .page-id-20 #products .adv-product__label,
 .page-id-20 .book-ski-headline h2 {
-  font-size: var(--fs-h2);
+  font-size: var(--fs-xl);
 }
 
 /* Lead text (state names, About signature) */
 .page-id-20 .list-location-parent a,
 .page-id-20 .mod-about-content h4 {
-  font-size: var(--fs-lead);
+  font-size: var(--fs-md);
 }
 
 /* Body copy */
@@ -3891,12 +3890,12 @@ h6, .h6 { font-size: var(--fs-small); }
 .page-id-20 #products .adv-products__intro,
 .page-id-20 #products .adv-products__sub,
 .page-id-20 .mod-about-content p {
-  font-size: var(--fs-body);
+  font-size: var(--fs-sm);
 }
 
 /* Footer links */
 .page-id-20 #footer .footer-info > a {
-  font-size: var(--fs-small);
+  font-size: var(--fs-xs);
 }
 
 /* ============================================
@@ -3909,10 +3908,10 @@ h6, .h6 { font-size: var(--fs-small); }
 
 /* Filter-panel heading: "Explore Our Locations" as an h2, ~2rem, 700.
    Specific enough to beat .mod-location-map h2 (clamp) and
-   .page-id-20 .mod-location-map h2 (--fs-h1). */
+   .page-id-20 .mod-location-map h2 (--fs-2xl). */
 .page-id-20 .mod-location-map .location-header h2,
 .mod-location-map .location-header h2 {
-  font-size: var(--fs-h2);
+  font-size: var(--fs-xl);
   font-weight: 700;
   color: #fff;
   font-family: 'Poppins', sans-serif;
@@ -3984,20 +3983,33 @@ h6, .h6 { font-size: var(--fs-small); }
 
 /* Sidebar a touch smaller */
 .location-left-filter .list-location-parent {
-  font-size: var(--fs-body);
+  font-size: var(--fs-sm);
 }
 .location-left-filter .list-location-parent li a {
   padding: 4px 22px;
 }
 
-/* Desktop: taller map + a scrollable list so an expanded state's dropdown can't
-   run past the map and get cut off. */
+/* Show the whole location list — the theme's capped list relies on the
+   mCustomScrollbar plugin, whose scroll is broken here and cut content off.
+   Un-cap it (and neutralize the mCustomScrollbar wrapper if it's present) so the
+   list just flows, and make the map tall enough to hold the fully-expanded list. */
+.location-left-filter .list-location-parent,
+.location-left-filter .list-location-parent.fix-scroll {
+  height: auto !important;
+  max-height: none !important;
+  overflow: visible !important;
+}
+.location-left-filter .mCSB_container {
+  transform: none !important;
+  position: static !important;
+  height: auto !important;
+}
+.location-left-filter .mCSB_scrollTools {
+  display: none !important;
+}
+
 @media (min-width: 992px) {
   .mod-location-map .map {
-    min-height: 700px;
-  }
-  .location-left-filter .list-location-parent {
-    max-height: 600px;
-    overflow-y: auto;
+    min-height: 720px;
   }
 }
