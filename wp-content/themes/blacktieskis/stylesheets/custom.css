@@ -2213,7 +2213,7 @@ html.html-popup-content .popup-inner > p a:hover {
 /* H1 */
 .page-template-page-location .mod-hero-image .content h1 {
   color: #fff;
-  font-size: clamp(1.8rem, calc(4px + 3vw), 3rem) !important;
+  font-size: var(--fs-display) !important;
   line-height: 1.15 !important;
   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
 }
@@ -3765,4 +3765,39 @@ html body .mod-book-ski .btn-outline-primary:focus {
     padding-top: 40px !important;
     padding-bottom: 40px !important;
   }
+}
+
+/* ============================================
+   WW-6: Location-page type scale (consolidation)
+   Four fluid sizes — large on desktop, smaller on mobile —
+   scoped to location pages only. Supersedes the older
+   per-section font-sizes in the Explore/FAQ blocks above.
+   ============================================ */
+body.page-template-page-location {
+  --fs-display: clamp(1.8rem, calc(4px + 3vw), 3rem);
+  --fs-heading: clamp(1.375rem, calc(0.9rem + 2.2vw), 1.875rem);
+  --fs-body:    clamp(1rem, calc(0.9rem + 0.5vw), 1.125rem);
+  --fs-small:   clamp(0.8rem, calc(0.75rem + 0.3vw), 0.875rem);
+}
+
+/* Section headings */
+.page-template-page-location .explore-section__heading,
+.page-template-page-location .mod-faqs .faqs__heading {
+  font-size: var(--fs-heading);
+}
+
+/* Card / featured titles + FAQ questions */
+.page-template-page-location .explore-card__title,
+.page-template-page-location .explore-featured__title,
+.page-template-page-location ul.accordion-list li h3 {
+  font-size: var(--fs-body);
+}
+
+/* Small text — descriptions, labels, CTAs, sub-headings */
+.page-template-page-location .explore-section__sub,
+.page-template-page-location .explore-card__desc,
+.page-template-page-location .explore-featured__desc,
+.page-template-page-location .explore-cat-cta,
+.page-template-page-location .mod-faqs .faqs__sub {
+  font-size: var(--fs-small);
 }
