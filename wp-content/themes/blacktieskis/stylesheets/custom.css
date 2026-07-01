@@ -3943,6 +3943,7 @@ h6, .h6 { font-size: var(--fs-xs); }
 .mod-location-map .location-left-filter {
   border-radius: 6px;
   overflow: hidden;
+  opacity: 1; /* app.css sets .8; this is also the GSAP .ani-bottom fade-in target */
 }
 
 /* Mobile: no rounded corners (the radius is a desktop-only treatment). Also add
