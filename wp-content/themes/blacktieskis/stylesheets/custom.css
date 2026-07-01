@@ -2213,7 +2213,7 @@ html.html-popup-content .popup-inner > p a:hover {
 /* H1 */
 .page-template-page-location .mod-hero-image .content h1 {
   color: #fff;
-  font-size: var(--fs-display) !important;
+  font-size: var(--fs-h1) !important;
   line-height: 1.15 !important;
   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
 }
@@ -3787,38 +3787,37 @@ html body .mod-book-ski .btn-outline-primary:focus {
 }
 
 /* ============================================
-   WW-6: Site type scale (design tokens)
-   Fluid sizes — large on desktop, smaller on mobile.
-   Defined globally; applied to location sections here and
-   (minimally) to the homepage. Additional tokens below cover
-   homepage sizes that sit between the core four.
+   WW-6: Site-wide type scale (8 fluid tokens)
+   One shared scale for the whole site. Each step is a clamp()
+   that scales large-on-desktop → smaller-on-mobile in a single
+   value. Applied via the global base block below (h1–h6/body/
+   .lead) plus a few scoped exceptions. Icon glyphs & decorative
+   numerals are NOT on the scale — they keep their own sizes.
+   Anchors tuned so mapped elements land within ~2px at a 390px
+   viewport (clamp min) and 1200px+ (clamp max).
    ============================================ */
 :root {
-  /* Fluid scale — location pages */
-  --fs-display:  clamp(1.8rem, calc(4px + 3vw), 3rem);
-  --fs-heading:  clamp(1.375rem, calc(0.9rem + 2.2vw), 1.875rem);
-  --fs-body:     clamp(1rem, calc(0.9rem + 0.5vw), 1.125rem);
-  --fs-small:    clamp(0.8rem, calc(0.75rem + 0.3vw), 0.875rem);
-  /* Homepage sizes — exact current values, kept as tokens (zero visual change) */
-  --fs-hero:     clamp(1.45rem, calc(4px + 4.2vw), 4rem);
-  --fs-subtitle: clamp(0.8rem, calc(6px + 0.69vw), 1rem);
-  --fs-h2:       1.875rem;
-  --fs-lead:     1.0625rem;
-  --fs-base:     1rem;
-  --fs-caption:  0.875rem;
+  --fs-hero:     clamp(1.45rem, calc(4px + 4.2vw), 4rem);             /* 23 → 64  homepage hero H1 */
+  --fs-hero-sub: clamp(0.8rem, calc(6px + 0.69vw), 1rem);            /* 13 → 16  hero subtitle */
+  --fs-h1:       clamp(1.8rem, calc(4px + 3vw), 3rem);               /* 29 → 48  page/section headings, all heroes */
+  --fs-h2:       clamp(1.4375rem, calc(1.23rem + 0.86vw), 1.875rem); /* 23 → 30  sub-headings, base h2 */
+  --fs-h3:       clamp(1.25rem, calc(1.226rem + 0.1vw), 1.3rem);     /* 20 → 20.8 card titles, .lead */
+  --fs-lead:     clamp(1.0625rem, calc(1.033rem + 0.12vw), 1.125rem);/* 17 → 18  intro/lead, base h3/h4 */
+  --fs-body:     1rem;                                               /* 16      body copy, base h5, buttons (flat) */
+  --fs-small:    clamp(0.8rem, calc(0.734rem + 0.27vw), 0.9375rem);  /* 12.8 → 15 captions, footer, base h6, small UI */
 }
 
 /* Section headings */
 .page-template-page-location .explore-section__heading,
 .page-template-page-location .mod-faqs .faqs__heading {
-  font-size: var(--fs-heading);
+  font-size: var(--fs-h2);
 }
 
 /* Card / featured titles + FAQ questions */
 .page-template-page-location .explore-card__title,
 .page-template-page-location .explore-featured__title,
 .page-template-page-location ul.accordion-list li h3 {
-  font-size: var(--fs-body);
+  font-size: var(--fs-lead);
 }
 
 /* Small text — descriptions, labels, CTAs, sub-headings */
@@ -3843,7 +3842,7 @@ html body .mod-book-ski .btn-outline-primary:focus {
 }
 .page-id-20 .btb-hero__content h2,
 .page-id-20 .btb-hero__content h2 em {
-  font-size: var(--fs-subtitle) !important;
+  font-size: var(--fs-hero-sub) !important;
 }
 
 /* Big section headings */
@@ -3851,7 +3850,7 @@ html body .mod-book-ski .btn-outline-primary:focus {
 .page-id-20 .mod-location-map h2,
 .page-id-20 #products .entry-title,
 .page-id-20 .mod-about-content h2 {
-  font-size: var(--fs-display);
+  font-size: var(--fs-h1);
 }
 
 /* Sub-headings (step titles, product labels, CTA headline) */
@@ -3877,12 +3876,12 @@ html body .mod-book-ski .btn-outline-primary:focus {
 .page-id-20 #products .adv-products__intro,
 .page-id-20 #products .adv-products__sub,
 .page-id-20 .mod-about-content p {
-  font-size: var(--fs-base);
+  font-size: var(--fs-body);
 }
 
 /* Footer links */
 .page-id-20 #footer .footer-info > a {
-  font-size: var(--fs-caption);
+  font-size: var(--fs-small);
 }
 
 /* ============================================
@@ -3895,7 +3894,7 @@ html body .mod-book-ski .btn-outline-primary:focus {
 
 /* Filter-panel heading: "Explore Our Locations" as an h2, ~2rem, 700.
    Specific enough to beat .mod-location-map h2 (clamp) and
-   .page-id-20 .mod-location-map h2 (fs-display). */
+   .page-id-20 .mod-location-map h2 (--fs-h1). */
 .page-id-20 .mod-location-map .location-header h2,
 .mod-location-map .location-header h2 {
   font-size: 2rem;
