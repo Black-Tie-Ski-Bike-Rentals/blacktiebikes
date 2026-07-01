@@ -1498,27 +1498,6 @@
                                             "maxlength": "",
                                             "placeholder": "",
                                             "parent_repeater": "field_explore_packages"
-                                        },
-                                        {
-                                            "key": "field_explore_pkg_badge",
-                                            "label": "Badge (optional)",
-                                            "name": "pkg_badge",
-                                            "aria-label": "",
-                                            "type": "text",
-                                            "instructions": "Only used on single-package categories. e.g. \"Guided Experience\".",
-                                            "required": false,
-                                            "conditional_logic": false,
-                                            "wrapper": {
-                                                "width": "",
-                                                "class": "",
-                                                "id": ""
-                                            },
-                                            "default_value": "",
-                                            "maxlength": "",
-                                            "placeholder": "",
-                                            "prepend": "",
-                                            "append": "",
-                                            "parent_repeater": "field_explore_packages"
                                         }
                                     ]
                                 }

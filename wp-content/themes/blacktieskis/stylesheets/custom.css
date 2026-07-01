@@ -2614,19 +2614,6 @@ html.html-popup-content .popup-inner > p a:hover {
   gap: 10px;
 }
 
-.explore-featured__badge {
-  font-size: 0.625rem;
-  font-weight: 500;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: var(--color-text);
-  background: #f1efe8;
-  border-radius: 4px;
-  padding: 3px 8px;
-  display: inline-block;
-  width: fit-content;
-}
-
 .explore-featured__title {
   font-family: 'Garnett', Georgia, serif !important;
   font-size: 1.125rem;
@@ -2762,10 +2749,6 @@ html.html-popup-content .popup-inner > p a:hover {
   .explore-featured__desc {
     font-size: 0.7rem;
     -webkit-line-clamp: 2;
-  }
-
-  .explore-featured__badge {
-    font-size: 0.55rem;
   }
 }
 
