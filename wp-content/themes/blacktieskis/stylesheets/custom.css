@@ -3807,6 +3807,22 @@ html body .mod-book-ski .btn-outline-primary:focus {
   --fs-small:    clamp(0.8rem, calc(0.734rem + 0.27vw), 0.9375rem);  /* 12.8 → 15 captions, footer, base h6, small UI */
 }
 
+/* ============================================
+   WW-6: Global base type — route the base elements through the
+   scale so the ENTIRE site (including utility templates with no
+   custom rules) inherits it. custom.css loads after app.css, so
+   these bare-element rules win on source order without !important,
+   superseding app.css's hard h1→38px / h2→24px mobile steps.
+   ============================================ */
+body { font-size: var(--fs-body); }
+h1, .h1 { font-size: var(--fs-h1); }
+h2, .h2 { font-size: var(--fs-h2); }
+h3, .h3 { font-size: var(--fs-lead); }   /* base h3 = 18px → lead band */
+h4, .h4 { font-size: var(--fs-lead); }   /* base h4 = 17px → lead band */
+h5, .h5 { font-size: var(--fs-body); }
+h6, .h6 { font-size: var(--fs-small); }
+.lead { font-size: var(--fs-h3); }
+
 /* Section headings */
 .page-template-page-location .explore-section__heading,
 .page-template-page-location .mod-faqs .faqs__heading {
