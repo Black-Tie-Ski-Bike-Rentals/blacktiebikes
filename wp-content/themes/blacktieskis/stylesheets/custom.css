@@ -100,7 +100,7 @@ ul.accordion-list li div.answer p {
 .mod-faqs .faqs__heading {
   text-align: left;          /* left-align heading */
   font-size: 1.875rem;       /* match other location section headings (.explore-section__heading) */
-  color: var(--color-text);
+  color: var(--color-heading);
   line-height: 1.2;
   margin-bottom: 8px;
 }
@@ -325,8 +325,8 @@ body div.gform_wrapper div.gform_body select {
 }
 .btn-primary {
   color: #212529;
-  background-color: #01b037;
-  border-color: #01b037;
+  background-color: #568f3b;
+  border-color: #568f3b;
 }
 .home-jumbotron.jumbotron h1 {
   margin: -24px 0 40px;
@@ -414,8 +414,8 @@ body div.gform_wrapper div.gform_body select {
   float: center !important;
 }
 #header.pin-header .btn {
-  border-color: #01b037;
-  color: #01b037;
+  border-color: #568f3b;
+  color: #568f3b;
   background-color: hsla(0, 0%, 100%, 0.9);
 }
 .location-left-filter .list-location-parent .active a {
@@ -467,8 +467,8 @@ body div.gform_wrapper div.gform_body select {
   );
 }
 .btn-outline-white {
-  color: #01b037;
-  border-color: #01b037;
+  color: #568f3b;
+  border-color: #568f3b;
   background: transparent;
 }
 /* Legacy blue hero overlay — kill it everywhere, hard. This element only ever
@@ -506,8 +506,8 @@ body div.gform_wrapper div.gform_body select {
   );
 }
 .btn-outline-primary {
-  color: #01b037;
-  border-color: #01b037;
+  color: #568f3b;
+  border-color: #568f3b;
 }
 .box-step.ani3 {
   margin: 73px 0 0 0;
@@ -639,7 +639,7 @@ body div.gform_wrapper div.gform_body select {
     position: inherit;
   }
   #menu-main-menu .menu-item-has-children .sub-menu {
-    background-color: #1ac1ff;
+    background-color: #fff;
     width: 100%;
 
     padding: 0px;
@@ -859,8 +859,8 @@ html.popup-animation .popup-careers.popup-inner,
 }
 @media only screen and (max-width: 575px) {
   .page-id-20 #products {
-    padding: 70px;
-    height: auto; /* WW-25: was 550px fixed */
+    padding: 40px 20px; /* WW-25: was 70px all-round (squished content horizontally on mobile) */
+    height: auto;
   }
   .mod-about .triangle-black {
     border-left: 400px solid transparent;
@@ -920,7 +920,7 @@ html.popup-animation .popup-careers.popup-inner,
 
 /* Dropdown Button */
 .dropdown-button {
-  background-color: #0000b3;
+  background-color: var(--color-green);
   color: white;
   padding: 16px;
   font-size: 16px;
@@ -957,7 +957,7 @@ html.popup-animation .popup-careers.popup-inner,
 }
 /* Change the background color of the dropdown button when the dropdown list is shown */
 .dropdown:hover .dropdown-button {
-  background-color: #6666ff;
+  background-color: var(--color-green-dark);
 }
 
 .select-cnew {
@@ -1751,7 +1751,8 @@ h6,
    ============================================ */
 
 :root {
-  --color-text: #1a1a18;
+  --color-text: #333333;      /* body/secondary grey — matches home page */
+  --color-heading: #282828;   /* heading/title dark grey — matches home page */
   --color-green: #568f3b;
   --color-green-dark: #4a7c32;
   --radius: 6px;
@@ -2389,7 +2390,7 @@ html.html-popup-content .popup-inner > p a:hover {
 .explore-section__heading {
   font-family: 'Garnett', Georgia, serif !important;
   font-size: 1.875rem;
-  color: var(--color-text);
+  color: var(--color-heading);
   margin-bottom: 0.375rem;
   line-height: 1.2;
 }
@@ -2415,7 +2416,7 @@ html.html-popup-content .popup-inner > p a:hover {
 .explore-cat-label {
   font-family: 'Garnett', Georgia, serif !important;
   font-weight: 700;
-  color: var(--color-text);
+  color: var(--color-heading);
   letter-spacing: -0.45px !important;
   text-transform: uppercase;
 }
@@ -2432,8 +2433,8 @@ html.html-popup-content .popup-inner > p a:hover {
 }
 
 .explore-cat-cta:hover {
-  color: #156bb1 !important;
-  text-decoration-color: #156bb1 !important;
+  color: #256bb2 !important;
+  text-decoration-color: #256bb2 !important;
 }
 
 /* Cards (shared) */
@@ -2476,13 +2477,13 @@ html.html-popup-content .popup-inner > p a:hover {
   font-family: 'Garnett', Georgia, serif !important;
   font-size: 1.125rem;
   font-weight: 700;
-  color: var(--color-text);
+  color: var(--color-heading);
   margin-bottom: 3px;
   line-height: 1.3;
 }
 
 .explore-card__desc {
-  font-size: 0.75rem;
+  font-size: 0.875rem;
   color: var(--color-text);
   line-height: 1.55;
   margin-bottom: 0;
@@ -2630,13 +2631,13 @@ html.html-popup-content .popup-inner > p a:hover {
   font-family: 'Garnett', Georgia, serif !important;
   font-size: 1.125rem;
   font-weight: 700;
-  color: var(--color-text);
+  color: var(--color-heading);
   line-height: 1.2;
   margin-bottom: 0;
 }
 
 .explore-featured__desc {
-  font-size: 0.95rem;
+  font-size: 0.875rem;
   color: var(--color-text);
   line-height: 1.6;
   max-width: 100%;
@@ -3169,8 +3170,13 @@ html body .mod-book-ski .btn-outline-primary:focus {
   margin-bottom: 8px;
 }
 .gear-card__address {
-  color: inherit;
+  color: var(--color-text);
   text-decoration: underline;
+}
+/* Gear body copy was inheriting pure #000; align to the palette body grey */
+.mod-getting-your-gear p,
+.mod-getting-your-gear .gear-card__list li {
+  color: var(--color-text);
 }
 .gear-card__address:hover {
   text-decoration: none;
@@ -3293,7 +3299,8 @@ html body .mod-book-ski .btn-outline-primary:focus {
 }
 .value-prop__desc {
   margin-bottom: 0;
-  color: #8b8b8b;
+  font-size: 0.875rem;
+  color: var(--color-text);
 }
 .value-props__cta {
   flex-shrink: 0;
@@ -3438,7 +3445,7 @@ html body .mod-book-ski .btn-outline-primary:focus {
   margin-bottom: 40px;
   text-align: center;
   font-size: 1.875rem;
-  color: var(--color-text);
+  color: var(--color-heading);
   line-height: 1.2;
 }
 .lp-rec {
@@ -3466,7 +3473,7 @@ html body .mod-book-ski .btn-outline-primary:focus {
 }
 .lp-rec__title {
   font-size: 1.3rem;
-  color: var(--color-text);
+  color: var(--color-heading);
   margin-bottom: 12px;
 }
 .lp-rec__desc {
@@ -3623,13 +3630,23 @@ html body .mod-book-ski .btn-outline-primary:focus {
 }
 .mod-about-content h2 {
   color: #fff; /* was green #568f3b */
-  font-size: 3rem;
+  font-size: 1.875rem; /* location section-title size (homepage overrides bigger below) */
   line-height: 1.1;
   margin-bottom: 1.5rem;
 }
-@media (max-width: 767px) {
-  .mod-about-content h2 { font-size: 2rem; }
+/* Homepage "Our Story" is bigger like the other homepage titles; location stays 1.875rem */
+.page-id-20 .mod-about-content h2 { font-size: clamp(1.8rem, calc(4px + 3vw), 3rem); }
+/* Location-page section titles: one size + the site dark gray (Our Story stays white) */
+.gear-heading,
+.explore-section__heading,
+.faqs__heading {
+  font-size: 1.875rem;
+  color: #282828;
 }
+/* Location-page subheadings: match the site sub gray */
+.explore-section__sub,
+.gear-subheading,
+.faqs__sub { color: #333; }
 
 /* WW-25 Adventure Products (homepage #products) — H2 @2rem, 3 round images
    (Bikes/Paddle/4x4) centered, "Explore premium gear" line + Book Now CTA. */
@@ -3645,9 +3662,9 @@ html body .mod-book-ski .btn-outline-primary:focus {
 #products .home-jumbotron { margin-bottom: 0; padding-bottom: 0; }
 /* Heading + subheading match the value-props section typography. */
 #products .entry-title { font-size: clamp(1.8rem, calc(4px + 3vw), 3rem); color: #282828; }
-#products .col-sm-12 > p:first-of-type {
-  color: #333;
-  font-size: 1rem;
+#products .adv-products__intro {
+  color: #333;       /* match the value-props descriptions */
+  font-size: 1rem;   /* = .step-item-content p (body size) */
   line-height: 1.6;
   max-width: 800px;
   margin-left: auto;
@@ -3674,11 +3691,17 @@ html body .mod-book-ski .btn-outline-primary:focus {
   width: 100%;
   text-align: center;
   margin-top: 1rem;
-  font-weight: 700;
-  font-size: 1.5rem;
-  letter-spacing: 0.5px;
+  font-weight: 700;       /* match the How It Works step titles (h2) */
+  font-size: 1.875rem;    /* = base h2 / step-title size */
+  color: #282828;         /* match the step titles' dark gray (not solid black) */
 }
-#products .adv-products__sub { margin-top: 3rem; }
+#products .adv-products__sub { margin-top: 3rem; color: #333; font-weight: 500; }
+/* Homepage typography consistency: one dark gray (#282828) + flat 1rem small text */
+.step-item-content h2 { color: #282828; } /* step titles = same dark as section titles + image labels */
+.steps-headline h3 { font-size: 1rem; }     /* How It Works sub = flat 1rem (was a clamp) */
+/* Map section: "Ready to get started?" = section-title size/weight, "Book your gear…" = sub size (stay white on the map bg) */
+.mod-location-map h2 { font-size: clamp(1.8rem, calc(4px + 3vw), 3rem); font-weight: 700; }
+.mod-location-map h3 { font-size: 1rem; }
 #products .newcl { margin-top: 1rem; }
 /* CTA reuses the global #boonowbutton styling (padding/radius/font/transition);
    just flip the colors for this instance: blue at rest, theme green on hover.
@@ -3688,7 +3711,8 @@ html body .mod-book-ski .btn-outline-primary:focus {
 #products #boonowbutton.is-hover { background-color: #568f3b !important; }
 @media (max-width: 767px) {
   #products .adv-products { flex-direction: column; align-items: center; gap: 2.5rem; }
-  #products .adv-product__img { width: 280px; height: 280px; }
+  /* keep it a perfect circle on narrow screens (height follows width, not fixed) */
+  #products .adv-product__img { width: min(280px, 80vw); height: auto; aspect-ratio: 1 / 1; }
 }
 
 /* WW-54: optional Gallery section — images styled as Explore cards (reuses the
@@ -3728,4 +3752,34 @@ html body .mod-book-ski .btn-outline-primary:focus {
   font-size: 2.5rem;
   line-height: 1;
   cursor: pointer;
+}
+
+/* Consistent vertical padding for the location-page Layout Builder ("mod" =
+   module) sections — they were a mix of 80px / 3rem / clamp / 60px, so adjacent
+   sections doubled up unevenly. Same top + bottom on all of them = even gaps.
+   Hero (mod-hero-image) and the full-bleed About (mod-about) are intentionally
+   excluded (structurally different). Tweak the two numbers to taste. */
+.mod-getting-your-gear,
+.mod-explore-section,
+.mod-value-props,
+.mod-faqs,
+.mod-gallery,
+.mod-reviews,
+.mod-about,
+.page-id-20 #products {
+  padding-top: 60px !important;    /* !important beats mod-reviews' own !important + the About's asymmetric 60/0 */
+  padding-bottom: 60px !important;
+}
+@media (max-width: 767px) {
+  .mod-getting-your-gear,
+  .mod-explore-section,
+  .mod-value-props,
+  .mod-faqs,
+  .mod-gallery,
+  .mod-reviews,
+  .mod-about,
+  .page-id-20 #products {
+    padding-top: 40px !important;
+    padding-bottom: 40px !important;
+  }
 }
