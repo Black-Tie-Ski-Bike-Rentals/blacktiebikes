@@ -4034,10 +4034,14 @@ h6, .h6 { font-size: var(--fs-xs); }
   }
 }
 
-/* Nudge the state names in from the left edge (children are already indented).
-   The green active highlight stays full-bleed because the padding is inside the
-   <a>, which spans the full width. */
+/* Nudge the state names in from the left edge. The green active highlight stays
+   full-bleed because the padding is inside the <a>, which spans the full width. */
 .location-left-filter .list-location-parent .state-nav {
+  padding-left: 40px;
+}
+/* Children (towns) align flush-left with the state names — no extra indent
+   (was 85px). Keep this in sync with the .state-nav padding-left above. */
+.location-left-filter .location-child {
   padding-left: 40px;
 }
 
