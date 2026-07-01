@@ -3981,12 +3981,16 @@ h6, .h6 { font-size: var(--fs-xs); }
   color: #fff;
 }
 
-/* Sidebar a touch smaller */
+/* Location list font — bigger + lighter weight. Size is set on the <a> too, to
+   beat the homepage `.page-id-20 .list-location-parent a` rule (custom.css:3878). */
 .location-left-filter .list-location-parent {
-  font-size: var(--fs-sm);
+  font-size: var(--fs-lg);
+  font-weight: 600;
 }
 .location-left-filter .list-location-parent li a {
   padding: 4px 22px;
+  font-size: var(--fs-lg);
+  font-weight: 600;
 }
 
 /* Show the whole location list — the theme's capped list relies on the
@@ -4020,12 +4024,45 @@ h6, .h6 { font-size: var(--fs-xs); }
 .location-left-filter .list-location-parent {
   padding-top: 16px;
 }
-.location-left-filter .list-location-parent > li.location-parent:first-child {
-  border-top: 0;
+.location-left-filter .list-location-parent li.location-parent:first-child {
+  border-top: 0 !important;
 }
 
 @media (min-width: 992px) {
   .mod-location-map .map {
     min-height: 720px;
   }
+}
+
+/* Nudge the state names in from the left edge (children are already indented).
+   The green active highlight stays full-bleed because the padding is inside the
+   <a>, which spans the full width. */
+.location-left-filter .list-location-parent .state-nav {
+  padding-left: 40px;
+}
+
+/* --- WW-24 pin pop-up. Built by the minified app.js (can't edit), so these are
+   CSS-only and won't be visible until the map renders on prod. Popup markup:
+   .content-map-popup > .title(img) + <h2><a>Name</a></h2>
+   + <a.parent-location-url>More Info</a> + <a.btn-primary>Book Now</a>. --- */
+
+/* Remove the redundant "More Info" link — the location name already links there. */
+.content-map-popup .parent-location-url {
+  display: none !important;
+}
+/* Full-width button(s). */
+.content-map-popup .btn-primary,
+.content-map-popup a.btn {
+  display: block;
+  width: 100%;
+  min-width: 0;
+}
+/* Location name centered top/bottom (balanced spacing; already centered horizontally). */
+.content-map-popup h2 {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+/* Underline the name to indicate it's a clickable link (links to the location page). */
+.content-map-popup h2 a {
+  text-decoration: underline;
 }
