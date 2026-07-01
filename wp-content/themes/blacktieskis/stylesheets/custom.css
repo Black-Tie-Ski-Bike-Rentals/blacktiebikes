@@ -3884,3 +3884,68 @@ html body .mod-book-ski .btn-outline-primary:focus {
 .page-id-20 #footer .footer-info > a {
   font-size: var(--fs-caption);
 }
+
+/* ============================================
+   WW-24: Homepage Map
+   Heading + green accents + container radius. The pin-popup items
+   (remove "more info", full-width buttons, center + underline the
+   location name) are handled separately — not verifiable without
+   the Google Maps API rendering.
+   ============================================ */
+
+/* Filter-panel heading: "Explore Our Locations" as an h2, ~2rem, 700.
+   Specific enough to beat .mod-location-map h2 (clamp) and
+   .page-id-20 .mod-location-map h2 (fs-display). */
+.page-id-20 .mod-location-map .location-header h2,
+.mod-location-map .location-header h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #fff;
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.15;
+  margin: 0;
+  text-transform: none;
+}
+
+/* Green accents → new palette green (was old maroon #490000 in app.css) */
+.location-left-filter .location-child .active {
+  color: var(--color-green);
+}
+
+/* Heading bar: breathing room so the (two-line) title isn't cramped edge-to-edge */
+.mod-location-map .location-header {
+  height: auto;
+  min-height: 68px;
+  padding: 16px 24px;
+  box-sizing: border-box;
+}
+
+/* Rounded containers. #map rounds the Google tiles once the API renders; the
+   filter panel is the container that's visible now, so round it too (its dark
+   header + list clip to the corners via overflow). */
+.mod-location-map #map {
+  border-radius: 6px;
+  overflow: hidden;
+}
+.mod-location-map .location-left-filter {
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+/* Mobile: no rounded corners (the radius is a desktop-only treatment). Also add
+   a little top/bottom padding on the gray heading bar — the old padding lived on
+   `.location-header p`, which no longer exists now that it's an h2. */
+@media (max-width: 991px) {
+  .mod-location-map .location-left-filter,
+  .mod-location-map #map {
+    border-radius: 0;
+    overflow: visible;
+  }
+  .mod-location-map .location-header {
+    display: block;
+    height: auto;
+    min-height: 0;
+    padding-top: 34px;
+    padding-bottom: 34px;
+  }
+}

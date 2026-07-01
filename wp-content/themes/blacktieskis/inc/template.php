@@ -221,9 +221,12 @@ function btb_location_picker_li( string $current_location_name ): string {
 function blacktiekis_get_location_datas($state_categories)
 {
 	
+	// WW-24: Breckenridge not operating this summer — hidden from the map.
+	$hidden_slugs = array( 'breckenridge' );
 	$locations = array();
-	foreach( $state_categories as $key=>$location ) {	
+	foreach( $state_categories as $key=>$location ) {
 		if( $location->parent != 0 ) {	
+			if ( in_array( $location->slug, $hidden_slugs, true ) ) { continue; }
 			$latlngitude = blacktieskis_get_category_meta_str($location->term_id, 'bt_parent_location_map', 'category_state_location');
 			if( !empty($latlngitude) && isset($latlngitude['lat']) && isset($latlngitude['lng']) ){
 				$item = array();
@@ -282,6 +285,8 @@ function blacktiekis_get_resport_datas()
 			global $post;
 			$post = $ps_resports[$i];
 			setup_postdata($post);
+			// WW-24: Breckenridge not operating this summer — hidden from the map.
+			if ( stripos( get_the_title(), 'breckenridge' ) !== false ) { continue; }
 			$latlngitude = get_field('bt_google_map');
 			if( !empty($latlngitude) && isset($latlngitude['lat']) && isset($latlngitude['lng']) ){
 				$item = array();

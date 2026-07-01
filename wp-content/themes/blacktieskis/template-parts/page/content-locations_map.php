@@ -21,7 +21,7 @@ $location_headline = get_sub_field('headline');
   </div>
   <div class="map position-relative">	  
       <div class="location-left-filter position-absolute bg-white ani-bottom" data-module="filter-location">
-	    <div class="location-header"><p>Servicing the following resorts</p></div>
+	    <div class="location-header"><h2>Explore Our Locations</h2></div>
         <div class="location-filter-mobile  d-lg-none">
           <a class="filter-text-default m-0 d-flex justify-content-between align-items-center">
             <span class="text-default">Locations</span>
