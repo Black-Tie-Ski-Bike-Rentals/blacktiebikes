@@ -4076,8 +4076,14 @@ h6, .h6 { font-size: var(--fs-xs); }
    so longer names (Beaver Creek, Sun Valley) can never clip. Blind fix — map is prod-only. */
 .content-map-popup h2,
 .content-map-popup h2 a {
-  font-size: 1.5rem !important;
-  line-height: 1.2;
   white-space: normal;
   overflow-wrap: break-word;
+}
+/* Phone only: shrink so the name fits the ~210px popup. Desktop keeps var(--fs-2xl) (48px). */
+@media (max-width: 767px) {
+  .content-map-popup h2,
+  .content-map-popup h2 a {
+    font-size: 1.5rem !important;
+    line-height: 1.2;
+  }
 }

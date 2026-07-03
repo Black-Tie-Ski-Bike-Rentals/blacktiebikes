@@ -125,7 +125,7 @@ $google_api_key = get_field('bt_google_api_key', 'option');
     $script([
 		'<?php echo TEMPLATE_URL; ?>/js/jquery-3.1.0.min.js'], 'vendor', function(){
 			$script([settings.jsPath + 'app.js?v=2.72'], 'myScript', function(){
-        $script([settings.jsPath + 'custom.js?v=1.4'], 'customScript');
+        $script([settings.jsPath + 'custom.js?v=1.5'], 'customScript');
 
         $script(['<?php echo TEMPLATE_URL; ?>/js/cf7.js?ver=1.3'], 'cf7Script', function(){
           $(window).trigger('load')
