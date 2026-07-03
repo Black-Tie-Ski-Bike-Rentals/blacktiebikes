@@ -87,25 +87,28 @@ $has_body = ( '' !== trim( wp_strip_all_tags( (string) $intro ) ) )
 </section>
 <?php endif; ?>
 
-<?php /* ── FAQs — same accordion build as the existing FAQ blocks ── */ ?>
+<?php /* ── FAQs — reuse the location-page .mod-faqs section so both share one
+     set of CSS rules (1200px container width, left heading, lowercase questions). ── */ ?>
 <?php $faqs = get_field( 'svc_faqs' ); ?>
 <?php if ( ! empty( $faqs ) ) : ?>
-<section class="module mod-service-faqs">
-  <h2 class="service-faqs__heading text-center">FAQs</h2>
-  <?php echo $faqs; ?>
+<section class="module mod-faqs">
+  <div class="container">
+    <h2 class="faqs__heading">FAQs</h2>
+    <?php echo $faqs; ?>
+  </div>
 </section>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/css/material-design-iconic-font.min.css">
 <script>
 jQuery(document).ready(function ($) {
-  $(".accordion-list > li > .answer").hide();
+  $(".mod-faqs .accordion-list > li > .answer").hide();
 
-  $(".accordion-list > li").click(function () {
+  $(".mod-faqs .accordion-list > li").click(function () {
     if ($(this).hasClass("active")) {
       $(this).removeClass("active").find(".answer").slideUp();
     } else {
-      $(".accordion-list > li.active .answer").slideUp();
-      $(".accordion-list > li.active").removeClass("active");
+      $(".mod-faqs .accordion-list > li.active .answer").slideUp();
+      $(".mod-faqs .accordion-list > li.active").removeClass("active");
       $(this).addClass("active").find(".answer").slideDown();
     }
     return false;
