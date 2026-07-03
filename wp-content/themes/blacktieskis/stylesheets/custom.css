@@ -4074,16 +4074,13 @@ h6, .h6 { font-size: var(--fs-xs); }
 /* Shrink the location name so it fits the fixed-width popup instead of overflowing/
    clipping (was inheriting a large heading size). Wrapping is allowed as a safety net
    so longer names (Beaver Creek, Sun Valley) can never clip. Blind fix — map is prod-only. */
+/* Location name: one step down from the inherited --fs-2xl to --fs-xl
+   (30px desktop -> 23px mobile via clamp) so it fits the ~210-248px popup.
+   Wrapping stays enabled so long names can never clip. */
 .content-map-popup h2,
 .content-map-popup h2 a {
+  font-size: var(--fs-xl) !important;
+  line-height: 1.2;
   white-space: normal;
   overflow-wrap: break-word;
-}
-/* Phone only: shrink so the name fits the ~210px popup. Desktop keeps var(--fs-2xl) (48px). */
-@media (max-width: 767px) {
-  .content-map-popup h2,
-  .content-map-popup h2 a {
-    font-size: 1.5rem !important;
-    line-height: 1.2;
-  }
 }
