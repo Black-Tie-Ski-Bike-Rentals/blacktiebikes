@@ -93,7 +93,8 @@ $has_body = ( '' !== trim( wp_strip_all_tags( (string) $intro ) ) )
 <?php if ( ! empty( $faqs ) ) : ?>
 <section class="module mod-faqs">
   <div class="container">
-    <h2 class="faqs__heading">FAQs</h2>
+    <h2 class="faqs__heading">Frequently Asked Questions</h2>
+    <p class="faqs__sub">Find quick answers about rentals, equipment, pickup options, and more.</p>
     <?php echo $faqs; ?>
   </div>
 </section>
