@@ -4071,3 +4071,13 @@ h6, .h6 { font-size: var(--fs-xs); }
 .content-map-popup h2 a {
   text-decoration: underline;
 }
+/* Shrink the location name so it fits the fixed-width popup instead of overflowing/
+   clipping (was inheriting a large heading size). Wrapping is allowed as a safety net
+   so longer names (Beaver Creek, Sun Valley) can never clip. Blind fix — map is prod-only. */
+.content-map-popup h2,
+.content-map-popup h2 a {
+  font-size: 1.5rem !important;
+  line-height: 1.2;
+  white-space: normal;
+  overflow-wrap: break-word;
+}
