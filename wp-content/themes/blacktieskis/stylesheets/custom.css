@@ -3874,11 +3874,13 @@ h6, .h6 { font-size: var(--fs-xs); }
   font-size: var(--fs-xl);
 }
 
-/* Lead text (state names, About signature) */
-.page-id-20 .list-location-parent a,
-.page-id-20 .mod-about-content h4 {
+/* Lead text (state names) */
+.page-id-20 .list-location-parent a {
   font-size: var(--fs-md);
 }
+/* About "Our Story" signature: don't cap it here — let it inherit app.css's
+   .mod-about-content h4 (2.25rem) so the homepage signature matches the location
+   pages (it was previously overridden down to --fs-md / ~18px, half the size). */
 
 /* Body copy */
 .page-id-20 .steps-headline h3,
