@@ -45,11 +45,11 @@ $has_body = ( '' !== trim( wp_strip_all_tags( (string) $intro ) ) )
 </section>
 <?php endif; ?>
 
-<?php /* ── Intro (centered, 70%) ────────────────────────────── */ ?>
+<?php /* ── Intro (left-aligned, 77%; editor controls weight/styles) ── */ ?>
 <?php if ( ! empty( $intro ) ) : ?>
 <section class="module mod-service-intro">
   <div class="container">
-    <div class="service-intro text-center"><?php echo $intro; ?></div>
+    <div class="service-intro"><?php echo $intro; ?></div>
   </div>
 </section>
 <?php endif; ?>

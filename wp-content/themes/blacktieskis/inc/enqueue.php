@@ -32,7 +32,7 @@ if ( ! function_exists( 'blacktieskis_common_script' ) ) {
 
 		wp_enqueue_style( 'google-fonts', '//fonts.googleapis.com/css?family=Open+Sans:200,300,400,500,600,700|Poppins:200,300,400,500,600,700|Reenie+Beanie:300,400,500,700' );
 		wp_enqueue_style( 'app', TEMPLATE_URL . '/stylesheets/app.css', array(), '5.9.3.4', 'screen' );
-		wp_enqueue_style( 'blacktieskis-custom', TEMPLATE_URL . '/stylesheets/custom.css', array( 'app' ), '5.55', 'screen' );
+		wp_enqueue_style( 'blacktieskis-custom', TEMPLATE_URL . '/stylesheets/custom.css', array( 'app' ), '5.56', 'screen' );
 		wp_enqueue_style( 'print', TEMPLATE_URL . '/stylesheets/print.css', array(), false, 'print' );
 
         //// Remove styles and js unused on front end side

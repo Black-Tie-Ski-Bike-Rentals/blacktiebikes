@@ -3346,12 +3346,16 @@ html body .mod-book-ski .btn-outline-primary:focus {
   padding: 60px 0;
 }
 .service-intro {
-  max-width: 70%;
+  max-width: 77%;        /* WW-60: 70% -> 77% */
   margin: 0 auto;
-  font-weight: 500;
+  /* WW-60: hard-coded font-weight removed so editor styles control weight */
 }
 .service-intro > *:last-child {
   margin-bottom: 0;
+}
+/* WW-60: any image dropped into the intro gets rounded corners */
+.service-intro img {
+  border-radius: 6px;
 }
 .mod-service-products {
   padding: 40px 0 60px;
